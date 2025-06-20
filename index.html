@@ -1,0 +1,3141 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cocina Gourmet: Recetas Fáciles y Exquisitas</title>
+    <meta name="description" content="Descubre recetas de cocina gourmet fáciles y deliciosas. Prepara platos exquisitos sin complicaciones. ¡Tu guía culinaria te espera!">
+    <style>
+      /* Estilos básicos para la visualización */
+      body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #ffffff; /* Set background to white */
+        color: #333; /* Set text color to dark gray */
+      }
+      /* Nuevo estilo para header */
+      header {
+        background-color: #333; /* A dark, professional blue-gray */
+        color: #ecf0f1; /* Soft off-white for text */
+        padding: 1.5rem 0; /* Slightly more vertical padding */
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      }
+
+      header h1 {
+        margin: 0; /* Remove default margin */
+        font-size: 2.8em; /* Slightly larger and more impactful */
+        letter-spacing: 1px; /* A little spacing for elegance */
+        font-family: "Georgia", serif; /* A classic, professional font */
+      }
+
+      /* Estilo para nav */
+      nav {
+        background-color: #555; /* A slightly lighter shade of the header's blue-gray */
+        padding: 0.75rem 0; /* More balanced padding */
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Another subtle shadow */
+      }
+
+      nav ul {
+        list-style: none; /* Elimina las viñetas predeterminadas */
+        padding: 0;
+        margin: 0;
+        display: flex; /* Muestra los elementos de la lista en línea */
+        justify-content: center; /* Centra los elementos horizontalmente */
+      }
+
+      nav ul li {
+        margin: 0 10px; /* Espacio entre los elementos de la lista */
+      }
+
+      nav ul li a {
+        color: white; /* Color de texto blanco */
+        text-decoration: none; /* Sin subrayado */
+        padding: 10px; /* Padding de 10px alrededor de cada enlace */
+        font-weight: 600; /* Slightly bolder for emphasis */
+        font-size: 1.1em; /* A bit larger for readability */
+        transition: background-color 0.3s ease; /* Transición suave para el cambio de fondo */
+      }
+
+      nav ul li a:hover {
+        background-color: #8d9093a4; /* Color de fondo al pasar el mouse (un tono de azul-gris) */
+        border-radius: 5px; /* Ligeros bordes redondeados para un toque moderno */
+      }
+
+      /* Estilos para las etiquetas <section> */
+      section {
+        padding: 40px 20px; /* 40px arriba y abajo, 20px a los lados */
+        margin-bottom: 30px; /* 30px de espacio debajo de cada sección */
+        border-bottom: 1px solid #eee; /* Existing style */
+      }
+      section:last-child {
+        border-bottom: none; /* Existing style */
+      }
+
+      /* Estilo específico para la sección de Contacto */
+      #contacto {
+        background-color: #f4f4f4; /* Gris muy claro */
+      }
+
+      /* Nueva clase .container */
+      .container {
+        max-width: 1000px; /* Limita el ancho máximo a 1000 píxeles */
+        margin: 0 auto; /* Centra el contenido horizontalmente */
+      }
+
+      /* Existing styles for other elements */
+      main {
+        padding: 20px;
+        max-width: 960px; /* Consider using .container here */
+        margin: 20px auto; /* Consider using .container here */
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #777;
+        margin-bottom: 15px;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: #fff;
+        margin-top: 30px;
+      }
+      ul.description-list {
+        list-style-type: disc; /* Usar viñetas de disco */
+        margin-left: 20px;
+        margin-bottom: 1em;
+      }
+      ul.description-list li {
+        margin-bottom: 0.5em;
+      }
+      .welcome-message {
+        text-align: center;
+        margin: 30px auto 20px auto; /* Adjust margin as needed */
+        max-width: 960px;
+        font-size: 1.8em; /* Make it a bit larger */
+        color: #555; /* A softer color for a welcome */
+      }
+
+      /* Estilos para la sección de la galería moderna */
+      .gallery-section-modern {
+        padding: 20px;
+        background-color: #f9f9f9;
+        margin-top: 40px; /* Añade un poco de espacio superior */
+        border-radius: 8px; /* Bordes redondeados para la sección */
+      }
+
+      /* Contenedor de la galería de imágenes moderna */
+      .modern-image-gallery {
+        display: flex; /* Usa flexbox para alinear los elementos en una fila */
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+        gap: 15px; /* Espacio entre las imágenes */
+        justify-content: center; /* Centra las imágenes horizontalmente */
+        max-width: 960px; /* Ancho máximo de la galería */
+        margin: 0 auto; /* Centrar la galería en la página */
+      }
+
+      /* Estilo para cada item de la galería moderna */
+      .modern-gallery-item {
+        flex: 1 1 30%; /* Permite que los elementos crezcan/encojan y tengan una base del 30% */
+        min-width: 280px; /* Ancho mínimo para cada imagen antes de apilarse */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        border-radius: 8px; /* Bordes redondeados */
+        overflow: hidden; /* Asegura que la imagen no se salga de los bordes redondeados */
+        transition: transform 0.3s ease-in-out; /* Transición suave al escalar */
+      }
+
+      .modern-gallery-item:hover {
+        transform: translateY(
+          -5px
+        ); /* Pequeño efecto de elevación al pasar el ratón */
+      }
+
+      .modern-gallery-item img {
+        width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
+        height: 250px; /* Altura fija para todas las imágenes */
+        object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+        display: block; /* Elimina cualquier espacio extra debajo de la imagen */
+      }
+
+      /* Media query para pantallas pequeñas (móviles) */
+      @media (max-width: 768px) {
+        .modern-image-gallery {
+          flex-direction: column; /* Apila las imágenes verticalmente en pantallas pequeñas */
+          align-items: center; /* Centra las imágenes apiladas */
+        }
+
+        .modern-gallery-item {
+          width: 90%; /* Hace que las imágenes ocupen la mayor parte del ancho en móvil */
+          max-width: 400px; /* Limita el ancho máximo en móvil */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Sabor y Saber: Tu Guía Gourmet</h1>
+    </header>
+
+    <h2 class="welcome-message">
+      ¡Bienvenido a Sabor y Saber, tu destino para la excelencia culinaria!
+    </h2>
+
+    <img
+      src="https://images.pexels.com/photos/4589164/pexels-photo-4589164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      alt="Especias en cucharas"
+      style="
+        width: 100%;
+        max-width: 960px;
+        display: block;
+        margin: 20px auto;
+        border-radius: 8px;
+      "
+    />
+
+    <nav>
+      <ul>
+        <li><a href="#tecnicas-chef">Técnicas y Secretos del Chef</a></li>
+        <li><a href="#recetas">Recetas y Creaciones</a></li>
+        <li><a href="#mundo-gourmet">El Mundo Gourmet</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#mi-recetario">Mi Recetario</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <p id="parrafo-cambiable">
+      ¡Prepárate para transformar tu cocina en un santuario de sabores! Aquí
+      encontrarás recetas exclusivas, técnicas innovadoras y secretos de
+      chefs que elevarán cada plato a una obra de arte. Tu aventura gourmet
+      acaba de empezar!
+    </p>
+    <button id="boton-magico">¡Que comience la magia culinaria!</button>
+  </section>
+    <main>
+      <section id="tecnicas-chef">
+        <h2>Técnicas y Secretos del Chef</h2>
+        <p>
+          ¿Alguna vez te preguntaste cómo los chefs profesionales logran esa
+          perfección en cada plato, o cómo sus creaciones parecen tan
+          artísticas? En "Sabor y Saber", te abrimos las puertas a la cocina de
+          alta gama, revelando las
+          <strong>técnicas culinarias y los secretos mejor guardados</strong>
+          que transforman lo ordinario en extraordinario. No se trata solo de
+          recetas, sino de entender el "por qué" detrás de cada paso, desde el
+          afilado perfecto de un cuchillo hasta el punto exacto de cocción que
+          eleva una carne a la categoría de manjar. Prepárate para dominar las
+          bases que harán que tus platos no solo sepan espectaculares, sino que
+          también se vean dignos de una portada de revista.
+        </p>
+
+        <p>
+          Deja de lado las conjeturas y abraza la precisión. Aquí aprenderás a
+          ejecutar <strong>cortes impecables</strong> que garantizan cocciones
+          uniformes y presentaciones dignas de admiración. Descubrirás cómo el
+          dominio de <strong>reducciones y fondos</strong> se convierte en el
+          cimiento de salsas de autor que realzan cualquier ingrediente, y cómo
+          el <strong>emplatado creativo</strong> convierte tu cocina en un
+          lienzo. Con nuestros consejos prácticos y detallados, te sentirás
+          confiado para experimentar, innovar y, lo más importante, impresionar
+          a tus invitados con cada bocado, llevando tu pasión por la cocina
+          casera al siguiente nivel gourmet.
+        </p>
+        <ul class="description-list">
+          <li>
+            <strong>Cortes Precisos:</strong> Aprende a manejar cuchillos como
+            un profesional para una presentación impecable.
+          </li>
+          <li>
+            <strong>Puntos de Cocción Perfectos:</strong> Domina el arte de
+            cocinar carnes, pescados y verduras a la perfección.
+          </li>
+          <li>
+            <strong>Salsas de Autor:</strong> Descubre cómo elaborar salsas que
+            realcen cualquier plato.
+          </li>
+          <li>
+            <strong>Emplatado Creativo:</strong> Consejos para presentar tus
+            creaciones como un verdadero artista.
+          </li>
+          <li>
+            <strong>Reducciones y Fondos:</strong> Los pilares de la cocina
+            gourmet explicados paso a paso.
+          </li>
+        </ul>
+        
+      <section id="recetas">
+        <h2>Recetas y Creaciones</h2>
+        <p>
+          Sumérgete en un universo de sabores y texturas. Nuestra colección de
+          recetas te inspirará a experimentar y crear platos inolvidables, desde
+          clásicos reinventados hasta innovadoras propuestas gourmet. Cada
+          receta viene con instrucciones detalladas y consejos para asegurar el
+          éxito en tu cocina.
+        </p>
+        <ul class="description-list">
+          <li>
+            <strong>Platos Principales:</strong> Recetas detalladas para
+            impresionar en cualquier ocasión.
+          </li>
+          <li>
+            <strong>Entradas Sofisticadas:</strong> Ideas para comenzar tu
+            experiencia culinaria con estilo.
+          </li>
+          <li>
+            <strong>Postres Irresistibles:</strong> Dulces creaciones que
+            deleitarán hasta el paladar más exigente.
+          </li>
+          <li>
+            <strong>Maridajes Sugeridos:</strong> Encuentra la bebida perfecta
+            para complementar cada plato.
+          </li>
+          <li>
+            <strong>Variaciones y Adaptaciones:</strong> Cómo personalizar las
+            recetas a tu gusto y disponibilidad.
+          </li>
+        </ul>
+      </section>
+
+      <section id="mundo-gourmet">
+        <h2>El Mundo Gourmet</h2>
+        <p>
+          Explora el fascinante universo de los ingredientes de calidad. Te
+          guiaremos a través de la selección de productos frescos y exóticos,
+          las historias detrás de los sabores más auténticos y las últimas
+          tendencias gastronómicas. Conoce la procedencia y el uso ideal de cada
+          elemento para maximizar su potencial en tus creaciones.
+        </p>
+        <ul class="description-list">
+          <li>
+            <strong>Guía de Ingredientes:</strong> Descubre la historia,
+            características y uso de productos premium.
+          </li>
+          <li>
+            <strong>Reseñas de Productos:</strong> Opiniones honestas sobre
+            utensilios, libros y alimentos especializados.
+          </li>
+          <li>
+            <strong>Mercados y Proveedores:</strong> Dónde encontrar los
+            ingredientes más exclusivos y de mejor calidad.
+          </li>
+          <li>
+            <strong>Tendencias Culinarias:</strong> Mantente al día con lo
+            último en el mundo de la alta cocina.
+          </li>
+          <li>
+            <strong>Historias de Origen:</strong> Viajes a las raíces de los
+            productos más emblemáticos.
+          </li>
+        </ul>
+      </section>
+
+      <section id="galeria" class="gallery-section-modern">
+        <h2>Galería</h2>
+        <div class="modern-image-gallery">
+          <div class="modern-gallery-item">
+            <img
+              src="https://imgur.com/y77o3Ci.jpg"
+              alt="Técnicas de Chef Gourmet"
+            />
+          </div>
+          <div class="modern-gallery-item">
+            <img
+              src="https://imgur.com/QuIP2Hy.jpg"
+              alt="Herramientas de Cocina Gourmet"
+            />
+          </div>
+          <div class="modern-gallery-item">
+            <img
+              src="https://imgur.com/hhTp6gf.jpg"
+              alt="Platillo Gourmet Minimalista"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="mi-recetario">
+        <h2>Mi Recetario</h2>
+      <style>
+        /* Estilos Generales */
+        body {
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
+          margin: 0;
+          padding: 20px;
+          background-color: #f5f5f5; /* Gris muy claro para el fondo */
+          color: #333;
+          line-height: 1.6;
+        }
+  
+        /* Contenedores Principales */
+        header,
+        footer,
+        .menu-generator {
+          background-color: #ffffff;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+          padding: 30px;
+          margin-bottom: 30px;
+        }
+  
+        /* Header */
+        header {
+          text-align: center;
+          background-color: #4a4a4a; /* Gris oscuro para el encabezado */
+          color: white;
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+  
+        header h1 {
+          margin: 0;
+          font-size: 3em;
+          letter-spacing: 1px;
+        }
+  
+        header p {
+          font-size: 1.1em;
+          opacity: 0.9;
+          margin-top: 10px;
+        }
+  
+        /* Navegación Principal */
+        nav {
+          display: flex;
+          justify-content: center;
+          gap: 15px;
+          margin-bottom: 30px;
+        }
+  
+        nav button {
+          padding: 12px 25px;
+          font-size: 1.1em;
+          cursor: pointer;
+          border: none;
+          border-radius: 8px;
+          background-color: #777777; /* Gris medio para botones de navegación */
+          color: white;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+  
+        nav button:hover {
+          background-color: #666666; /* Un poco más oscuro al pasar el ratón */
+          transform: translateY(-2px);
+        }
+  
+        nav button.active {
+          background-color: #333333; /* Gris más oscuro para el botón activo */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+  
+        /* Contenedor de Secciones de Recetas */
+        main.section-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+        }
+  
+        /* Sección de Recetas Individual */
+        .recipe-section {
+          background-color: #ffffff;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          width: 100%;
+          max-width: 950px;
+          transition: transform 0.3s ease-in-out;
+        }
+  
+        .recipe-section h2 {
+          text-align: center;
+          color: #4a4a4a;
+          margin-top: 0;
+          margin-bottom: 25px;
+          font-size: 2.2em;
+          border-bottom: 2px solid #e0e0e0;
+          padding-bottom: 10px;
+        }
+  
+        /* Pestañas de Subcategorías */
+        .recipe-category-tabs {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px;
+          margin-bottom: 30px;
+        }
+  
+        .recipe-category-tabs button {
+          padding: 10px 18px;
+          font-size: 0.95em;
+          cursor: pointer;
+          border: 1px solid #cccccc;
+          border-radius: 6px;
+          background-color: #e8e8e8; /* Gris claro para los botones de categoría */
+          color: #555555;
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+  
+        .recipe-category-tabs button.active,
+        .recipe-category-tabs button:hover {
+          background-color: #888888; /* Gris oscuro al activo/hover */
+          color: white;
+          border-color: #888888;
+        }
+  
+        /* Tarjeta de Receta Individual */
+        .recipe-card {
+          border: 1px solid #e0e0e0;
+          padding: 25px;
+          margin-bottom: 20px;
+          border-radius: 8px;
+          background-color: #fdfdfd;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+  
+        .recipe-card h3 {
+          color: #666666;
+          margin-top: 0;
+          font-size: 2em;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+  
+        .recipe-card img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 6px;
+          margin-bottom: 20px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+  
+        /* Información Nutricional */
+        .nutrition-info {
+          background-color: #f8f8f8;
+          padding: 15px;
+          border-left: 5px solid #a0a0a0;
+          border-radius: 5px;
+          margin-bottom: 20px;
+          font-size: 0.95em;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+          gap: 10px;
+        }
+  
+        .nutrition-info p {
+          margin: 0;
+          white-space: nowrap; /* Evita que el texto se rompa */
+        }
+  
+        .nutrition-info strong {
+          color: #777777;
+        }
+  
+        .health-indicator {
+          text-align: center;
+          margin-top: 15px;
+          font-weight: bold;
+          color: #555555;
+        }
+  
+        .stars {
+          color: #f39c12; /* Color de estrella dorado/naranja */
+          font-size: 1.2em;
+          letter-spacing: 2px;
+        }
+  
+        /* Contenido de la Receta */
+        .recipe-content div {
+          margin-bottom: 20px;
+        }
+  
+        .recipe-content h4 {
+          color: #555555;
+          border-bottom: 1px dashed #e0e0e0;
+          padding-bottom: 8px;
+          margin-bottom: 12px;
+          font-size: 1.4em;
+        }
+  
+        .recipe-content ul,
+        .recipe-content ol {
+          padding-left: 25px;
+          margin: 0;
+        }
+  
+        .recipe-content ul li,
+        .recipe-content ol li {
+          margin-bottom: 5px;
+        }
+  
+        /* Botón "Ver otra receta" */
+        .generate-button {
+          display: block;
+          margin: 30px auto 0 auto;
+          padding: 12px 30px;
+          font-size: 1.1em;
+          cursor: pointer;
+          background-color: #999999; /* Gris para el botón de generar */
+          color: white;
+          border: none;
+          border-radius: 6px;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+  
+        .generate-button:hover {
+          background-color: #888888;
+          transform: translateY(-2px);
+        }
+  
+        /* Botón de Favoritos */
+        .favorite-button {
+          background: none;
+          border: none;
+          font-size: 1.8em;
+          cursor: pointer;
+          color: #cccccc; /* Gris por defecto */
+          transition: color 0.2s ease;
+          float: right;
+          margin-left: 10px;
+        }
+  
+        .favorite-button.active {
+          color: #f39c12; /* Dorado cuando es favorito */
+        }
+        .favorite-button:hover {
+          color: #f39c12; /* Dorado en hover, incluso si no es favorito */
+        }
+  
+        /* Generador de Menú */
+        .menu-generator {
+          text-align: center;
+        }
+  
+        .menu-generator h3 {
+          color: #4a4a4a;
+          margin-bottom: 25px;
+          font-size: 2.2em;
+        }
+  
+        .menu-generator p {
+          font-size: 1.1em;
+          margin-bottom: 30px;
+          color: #666666;
+        }
+  
+        .menu-generator select,
+        .menu-generator button {
+          padding: 12px 25px;
+          font-size: 1.1em;
+          border-radius: 8px;
+          border: 1px solid #cccccc;
+          margin: 10px;
+          cursor: pointer;
+        }
+  
+        .menu-generator select {
+          background-color: #f8f8f8;
+          color: #333;
+        }
+  
+        .menu-generator button {
+          background-color: #777777;
+          color: white;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+  
+        .menu-generator button:hover {
+          background-color: #666666;
+          transform: translateY(-2px);
+        }
+  
+        #generated-menu {
+          margin-top: 30px;
+          padding: 20px;
+          background-color: #f8f8f8;
+          border-radius: 8px;
+          border: 1px dashed #cccccc;
+          text-align: left;
+          color: #555555;
+        }
+  
+        #generated-menu h4 {
+          color: #4a4a4a;
+          margin-top: 0;
+          margin-bottom: 15px;
+          font-size: 1.6em;
+          text-align: center;
+        }
+  
+        #generated-menu ul {
+          list-style-type: none;
+          padding: 0;
+        }
+  
+        #generated-menu li {
+          margin-bottom: 15px;
+        }
+  
+        #generated-menu li strong {
+          color: #666;
+          font-size: 1.1em;
+        }
+  
+        #generated-menu .day-menu {
+          margin-bottom: 20px;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #e0e0e0;
+        }
+        #generated-menu .day-menu:last-child {
+          border-bottom: none;
+        }
+  
+        /* Footer */
+        footer {
+          text-align: center;
+          background-color: #ffffff;
+          color: rgb(0, 0, 0);
+          font-size: 0.9em;
+          margin-bottom: 0; /* Asegura que el footer esté al final */
+        }
+  
+        /* Media Queries para responsividad */
+        @media (max-width: 768px) {
+          body {
+            padding: 15px;
+          }
+          header h1 {
+            font-size: 2.2em;
+          }
+          nav {
+            flex-wrap: wrap;
+            gap: 10px;
+          }
+          nav button {
+            padding: 10px 18px;
+            font-size: 1em;
+          }
+          .recipe-section,
+          .menu-generator {
+            padding: 20px;
+          }
+          .recipe-section h2 {
+            font-size: 1.8em;
+          }
+          .recipe-category-tabs {
+            flex-direction: column;
+            gap: 8px;
+          }
+          .recipe-category-tabs button {
+            width: 100%;
+          }
+          .recipe-card h3 {
+            font-size: 1.6em;
+          }
+          .nutrition-info {
+            grid-template-columns: 1fr; /* Una columna en móviles */
+          }
+          .recipe-content h4 {
+            font-size: 1.2em;
+          }
+          .generate-button,
+          .menu-generator button,
+          .menu-generator select {
+            padding: 10px 20px;
+            font-size: 1em;
+          }
+          .favorite-button {
+            font-size: 1.5em;
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <header>
+        <h1>Buscador Inteligente de Recetas</h1>
+        <p>
+          Encuentra tu receta perfecta para cualquier momento del día y necesidad
+          nutricional.
+        </p>
+      </header>
+  
+      <nav>
+        <button id="nav-desayuno" onclick="showSection('desayuno', this)">
+          Desayuno
+        </button>
+        <button id="nav-comida" onclick="showSection('comida', this)">
+          Comida
+        </button>
+        <button id="nav-cena" onclick="showSection('cena', this)">Cena</button>
+      </nav>
+  
+      <main class="section-container">
+        <section id="desayuno" class="recipe-section" style="display: none">
+          <h2>Recetas de Desayuno</h2>
+          <div class="recipe-category-tabs">
+            <button
+              id="desayuno-saludables"
+              onclick="loadRecipes('desayuno', 'saludables', this)"
+            >
+              Saludables
+            </button>
+            <button
+              id="desayuno-ligeras"
+              onclick="loadRecipes('desayuno', 'ligeras', this)"
+            >
+              Ligeras
+            </button>
+            <button
+              id="desayuno-veganas"
+              onclick="loadRecipes('desayuno', 'veganas', this)"
+            >
+              Veganas
+            </button>
+            <button
+              id="desayuno-snacks"
+              onclick="loadRecipes('desayuno', 'snacks', this)"
+            >
+              Snacks
+            </button>
+          </div>
+          <div id="desayuno-recipes"></div>
+        </section>
+  
+        <section id="comida" class="recipe-section" style="display: none">
+          <h2>Recetas de Comida</h2>
+          <div class="recipe-category-tabs">
+            <button
+              id="comida-saludables"
+              onclick="loadRecipes('comida', 'saludables', this)"
+            >
+              Saludables
+            </button>
+            <button
+              id="comida-ligeras"
+              onclick="loadRecipes('comida', 'ligeras', this)"
+            >
+              Ligeras
+            </button>
+            <button
+              id="comida-veganas"
+              onclick="loadRecipes('comida', 'veganas', this)"
+            >
+              Veganas
+            </button>
+            <button
+              id="comida-snacks"
+              onclick="loadRecipes('comida', 'snacks', this)"
+            >
+              Snacks
+            </button>
+          </div>
+          <div id="comida-recipes"></div>
+        </section>
+  
+        <section id="cena" class="recipe-section" style="display: none">
+          <h2>Recetas de Cena</h2>
+          <div class="recipe-category-tabs">
+            <button
+              id="cena-saludables"
+              onclick="loadRecipes('cena', 'saludables', this)"
+            >
+              Saludables
+            </button>
+            <button
+              id="cena-ligeras"
+              onclick="loadRecipes('cena', 'ligeras', this)"
+            >
+              Ligeras
+            </button>
+            <button
+              id="cena-veganas"
+              onclick="loadRecipes('cena', 'veganas', this)"
+            >
+              Veganas
+            </button>
+            <button
+              id="cena-snacks"
+              onclick="loadRecipes('cena', 'snacks', this)"
+            >
+              Snacks
+            </button>
+          </div>
+          <div id="cena-recipes"></div>
+        </section>
+      </main>
+  
+      <div class="menu-generator">
+        <h3>¿Quieres un menú personalizado?</h3>
+        <p>
+          Genera un menú semanal basado en tus recetas favoritas o según tus
+          objetivos nutricionales.
+        </p>
+        <select id="nutritional-objective">
+          <option value="">Selecciona un objetivo</option>
+          <option value="bajar-grasa">Bajar Grasa Corporal</option>
+          <option value="ganar-musculo">Ganar Músculo</option>
+          <option value="alimentacion-vegana">Alimentación Vegana</option>
+          <option value="detox">Detox</option>
+        </select>
+        <button onclick="generateMenu()">Generar Menú</button>
+        <div id="generated-menu" style="display: none"></div>
+      </div>
+  
+      <script>
+        // *** Base de datos de recetas simulada ***
+        // Incluye un ID único para cada receta para el manejo de favoritos.
+        const recipesData = {
+          desayuno: {
+            saludables: [
+              {
+                id: "d-s-1",
+                name: "Bowl de Avena con Frutas y Nueces",
+                desc: "Un desayuno completo y nutritivo, ideal para empezar el día con energía y fibra.",
+                nutrition: {
+                  cal: 380,
+                  fat: 12,
+                  sodium: 40,
+                  protein: 15,
+                  carbs: 55,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Avena+Frutas",
+                ingredients: [
+                  "1/2 taza de avena en hojuelas",
+                  "1 taza de agua o leche vegetal",
+                  "1/2 plátano en rodajas",
+                  "Un puñado de frutos rojos (frescos o congelados)",
+                  "10g de nueces picadas",
+                  "1 cucharadita de semillas de chía",
+                  "Pizca de canela",
+                ],
+                procedure: [
+                  "1. Combina la avena y el líquido en una olla o microondas y cocina según las instrucciones hasta que esté cremosa.",
+                  "2. Vierte la avena en un bowl.",
+                  "3. Decora con el plátano, frutos rojos, nueces y semillas de chía. Espolvorea canela.",
+                ],
+                finish:
+                  "Un bowl de avena cálido y reconfortante, con una mezcla vibrante de colores y texturas. Las frutas aportan dulzura natural y las nueces un toque crujiente.",
+              },
+              {
+                id: "d-s-2",
+                name: "Tostadas de Aguacate y Huevo Poché",
+                desc: "Un desayuno rico en proteínas y grasas saludables, perfecto para mantenerte saciado.",
+                nutrition: {
+                  cal: 320,
+                  fat: 20,
+                  sodium: 150,
+                  protein: 18,
+                  carbs: 18,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Tostadas+Aguacate",
+                ingredients: [
+                  "2 rebanadas de pan integral tostado",
+                  "1/2 aguacate maduro",
+                  "1 huevo grande",
+                  "Sal y pimienta al gusto",
+                  "Chile en hojuelas (opcional)",
+                  "Brotes de alfalfa para decorar",
+                ],
+                procedure: [
+                  "1. Tuesta el pan integral hasta que esté dorado y crujiente.",
+                  "2. Prepara el huevo poché: en una olla con agua hirviendo a fuego lento, con un poco de vinagre, crea un remolino y desliza el huevo sin cáscara. Cocina por 3-4 minutos.",
+                  "3. Mientras, machaca el aguacate sobre las tostadas y sazona con sal y pimienta.",
+                  "4. Con una espumadera, retira el huevo poché y colócalo cuidadosamente sobre el aguacate. Espolvorea chile en hojuelas y brotes.",
+                ],
+                finish:
+                  "Tostadas visualmente atractivas con el verde brillante del aguacate y la yema líquida del huevo poché. Un bocado cremoso y sabroso con un ligero toque picante.",
+              },
+              {
+                id: "d-s-3",
+                name: "Fruta Fresca con Yogur Griego y Granola",
+                desc: "Un desayuno ligero y refrescante, ideal para una rápida inyección de nutrientes.",
+                nutrition: {
+                  cal: 250,
+                  fat: 8,
+                  sodium: 70,
+                  protein: 12,
+                  carbs: 35,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Fruta+Yogur",
+                ingredients: [
+                  "1 taza de yogur griego natural sin azúcar",
+                  "1/2 taza de bayas mixtas (frescas o congeladas)",
+                  "1/4 taza de granola baja en azúcar",
+                  "Una cucharadita de miel o jarabe de arce (opcional)",
+                ],
+                procedure: [
+                  "1. Coloca el yogur griego en un bowl.",
+                  "2. Añade las bayas mixtas por encima.",
+                  "3. Espolvorea la granola y si deseas, rocía con un poco de miel o jarabe de arce.",
+                ],
+                finish:
+                  "Un bowl colorido y fresco, con la cremosidad del yogur, la acidez de las bayas y el crujido de la granola. Perfecto para un desayuno rápido y revitalizante.",
+              },
+              {
+                id: "d-s-4",
+                name: "Huevos Revueltos con Espinacas y Queso Fresco",
+                desc: "Una opción clásica, alta en proteínas y vegetales, para un desayuno completo y saludable.",
+                nutrition: {
+                  cal: 280,
+                  fat: 18,
+                  sodium: 250,
+                  protein: 20,
+                  carbs: 5,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Huevos+Espinacas",
+                ingredients: [
+                  "2 huevos grandes",
+                  "1 taza de espinacas frescas",
+                  "30g de queso fresco bajo en grasa, desmenuzado",
+                  "1 cucharadita de aceite de oliva",
+                  "Sal y pimienta al gusto",
+                ],
+                procedure: [
+                  "1. Calienta el aceite de oliva en un sartén a fuego medio.",
+                  "2. Añade las espinacas y cocina hasta que se marchiten.",
+                  "3. En un bowl, bate los huevos con sal y pimienta.",
+                  "4. Vierte los huevos batidos en el sartén con las espinacas. Cocina, revolviendo suavemente, hasta que los huevos estén cocidos a tu gusto.",
+                  "5. Incorpora el queso fresco desmenuzado justo antes de servir.",
+                ],
+                finish:
+                  "Un plato de huevos revueltos cremoso, con el verde vibrante de las espinacas y el toque lácteo del queso. Simple, rápido y muy satisfactorio.",
+              },
+              {
+                id: "d-s-5",
+                name: "Pancakes de Plátano y Avena (sin harina)",
+                desc: "Pancakes saludables y deliciosos, hechos solo con dos ingredientes principales, ideales para un desayuno dulce y nutritivo.",
+                nutrition: {
+                  cal: 300,
+                  fat: 8,
+                  sodium: 60,
+                  protein: 10,
+                  carbs: 50,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Pancakes+Avena+Platano",
+                ingredients: [
+                  "1 plátano maduro",
+                  "2 huevos grandes",
+                  "1/4 taza de avena en hojuelas",
+                  "Pizca de canela (opcional)",
+                  "Aceite en spray para cocinar",
+                ],
+                procedure: [
+                  "1. En un bowl, machaca el plátano hasta obtener un puré suave.",
+                  "2. Añade los huevos y la avena al puré de plátano. Mezcla bien hasta integrar (puedes usar una licuadora para una mezcla más suave). Agrega canela si deseas.",
+                  "3. Calienta un sartén antiadherente a fuego medio y rocía con aceite en spray.",
+                  "4. Vierte pequeñas porciones de la mezcla para formar los pancakes.",
+                  "5. Cocina por 2-3 minutos por cada lado, o hasta que estén dorados y cocidos por completo. Sirve inmediatamente.",
+                ],
+                finish:
+                  "Pancakes pequeños y esponjosos con un ligero dulzor natural del plátano. Son una alternativa saludable y muy fácil de hacer a los pancakes tradicionales.",
+              },
+            ],
+            ligeras: [
+              {
+                id: "d-l-1",
+                name: "Smoothie Verde Detox",
+                desc: "Un batido desintoxicante y lleno de vitaminas, perfecto para una digestión ligera.",
+                nutrition: {
+                  cal: 180,
+                  fat: 3,
+                  sodium: 30,
+                  protein: 5,
+                  carbs: 30,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Smoothie+Detox",
+                ingredients: [
+                  "1 taza de espinacas frescas",
+                  "1/2 pepino",
+                  "1/2 manzana verde",
+                  "Jugo de 1/2 limón",
+                  "1 taza de agua de coco o agua filtrada",
+                  "Opcional: un trozo pequeño de jengibre fresco",
+                ],
+                procedure: [
+                  "1. Lava y pica todos los ingredientes.",
+                  "2. Coloca la espinaca, pepino, manzana, jugo de limón y agua de coco (y jengibre si usas) en una licuadora.",
+                  "3. Licúa hasta obtener una mezcla suave y homogénea. Si está muy espeso, añade un poco más de agua.",
+                  "4. Sirve inmediatamente.",
+                ],
+                finish:
+                  "Un batido de color verde brillante, con una textura suave y un sabor fresco y ligeramente ácido. Ideal para limpiar el organismo y sentirte ligero.",
+              },
+              {
+                id: "d-l-2",
+                name: "Claras de Huevo Revueltas con Tomate",
+                desc: "Un desayuno muy bajo en calorías y alto en proteínas, ideal para mantener la línea.",
+                nutrition: {
+                  cal: 120,
+                  fat: 2,
+                  sodium: 180,
+                  protein: 18,
+                  carbs: 5,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Claras+Tomate",
+                ingredients: [
+                  "3 claras de huevo",
+                  "1/2 tomate pequeño picado",
+                  "Sal y pimienta al gusto",
+                  "Una pizca de orégano",
+                  "Aceite en spray para cocinar",
+                ],
+                procedure: [
+                  "1. En un sartén antiadherente, rocía un poco de aceite en spray y calienta a fuego medio.",
+                  "2. Vierte las claras de huevo y el tomate picado.",
+                  "3. Cocina, revolviendo constantemente con una espátula, hasta que las claras estén cocidas y el tomate suave.",
+                  "4. Sazona con sal, pimienta y orégano.",
+                ],
+                finish:
+                  "Unas claras de huevo suaves y esponjosas, con pequeños trozos de tomate que le aportan un toque de color y frescura. Un desayuno muy ligero pero saciante.",
+              },
+              {
+                id: "d-l-3",
+                name: "Café con Leche de Almendras y Fruta",
+                desc: "Una opción minimalista y baja en calorías para un inicio de día sencillo.",
+                nutrition: {
+                  cal: 100,
+                  fat: 4,
+                  sodium: 50,
+                  protein: 3,
+                  carbs: 12,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Cafe+Fruta",
+                ingredients: [
+                  "1 taza de café negro o espresso",
+                  "1/2 taza de leche de almendras sin azúcar",
+                  "1 manzana pequeña o un puñado de uvas",
+                ],
+                procedure: [
+                  "1. Prepara tu café como de costumbre.",
+                  "2. Calienta la leche de almendras y añádela al café (puedes espumarla si deseas).",
+                  "3. Sirve junto a la fruta fresca elegida.",
+                ],
+                finish:
+                  "Un desayuno simple y directo, con la calidez y el aroma del café y la frescura de la fruta. Ideal para quienes prefieren algo muy ligero por la mañana.",
+              },
+              {
+                id: "d-l-4",
+                name: "Pomelo a la Parrilla con Miel y Menta",
+                desc: "Un desayuno cítrico y refrescante, muy ligero y fácil de preparar.",
+                nutrition: { cal: 110, fat: 0, sodium: 5, protein: 1, carbs: 28 },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Pomelo+Parrilla",
+                ingredients: [
+                  "1 pomelo (toronja), cortado por la mitad",
+                  "1 cucharadita de miel",
+                  "Hojas de menta fresca para decorar",
+                ],
+                procedure: [
+                  "1. Precalienta la parrilla del horno. Coloca las mitades de pomelo en una bandeja para hornear, con la parte cortada hacia arriba.",
+                  "2. Rocía 1/2 cucharadita de miel sobre cada mitad de pomelo.",
+                  "3. Asa bajo la parrilla por 5-7 minutos, o hasta que los bordes estén ligeramente caramelizados y el pomelo esté caliente.",
+                  "4. Retira del horno y decora con hojas de menta fresca.",
+                ],
+                finish:
+                  "Mitades de pomelo rosadas y jugosas, ligeramente caramelizadas en la superficie. El sabor dulce de la miel equilibra la acidez, creando un desayuno vibrante y ligero.",
+              },
+              {
+                id: "d-l-5",
+                name: "Tostada de Arroz con Rodajas de Pepino",
+                desc: "Un snack o desayuno ultraligero y crujiente, perfecto para una digestión muy suave.",
+                nutrition: { cal: 80, fat: 1, sodium: 40, protein: 2, carbs: 16 },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Tostada+Pepino",
+                ingredients: [
+                  "1 tostada de arroz inflado (sin sal)",
+                  "1/4 pepino pequeño, en rodajas finas",
+                  "Pizca de sal y eneldo seco (opcional)",
+                ],
+                procedure: [
+                  "1. Coloca las rodajas de pepino sobre la tostada de arroz.",
+                  "2. Espolvorea una pizca de sal y eneldo seco si deseas un poco más de sabor.",
+                ],
+                finish:
+                  "Una tostada de arroz crujiente, con la frescura y el ligero crujido del pepino. Un desayuno o snack minimalista que es sorprendentemente refrescante.",
+              },
+            ],
+            veganas: [
+              {
+                id: "d-v-1",
+                name: "Pudín de Chía con Leche de Coco y Berries",
+                desc: "Un pudín cremoso y nutritivo, cargado de omega-3 y antioxidantes, sin lácteos.",
+                nutrition: {
+                  cal: 300,
+                  fat: 18,
+                  sodium: 20,
+                  protein: 8,
+                  carbs: 30,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Pudin+Chia",
+                ingredients: [
+                  "3 cucharadas de semillas de chía",
+                  "1 taza de leche de coco (bebida, no enlatada)",
+                  "1 cucharadita de sirope de arce o agave",
+                  "1/2 taza de berries mixtas (frescas o congeladas)",
+                  "Opcional: una pizca de vainilla",
+                ],
+                procedure: [
+                  "1. En un frasco o bowl, mezcla las semillas de chía, la leche de coco y el sirope de arce (y vainilla).",
+                  "2. Revuelve bien y refrigera por al menos 4 horas o idealmente toda la noche, revolviendo una vez a los 15 minutos para evitar grumos.",
+                  "3. Al momento de servir, decora con las berries frescas.",
+                ],
+                finish:
+                  "Un pudín de chía con una textura gelatinosa y cremosa, con la frescura de las berries en la parte superior. Un desayuno vegano delicioso y fácil de preparar con antelación.",
+              },
+              {
+                id: "d-v-2",
+                name: "Tostadas de Mantequilla de Cacahuete y Plátano",
+                desc: "Un clásico vegano lleno de energía, ideal para un desayuno rápido y satisfactorio.",
+                nutrition: {
+                  cal: 400,
+                  fat: 25,
+                  sodium: 180,
+                  protein: 12,
+                  carbs: 35,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Tostadas+PB+Platano",
+                ingredients: [
+                  "2 rebanadas de pan integral (vegano)",
+                  "2 cucharadas de mantequilla de cacahuete natural",
+                  "1 plátano pequeño en rodajas",
+                  "Opcional: una pizca de semillas de sésamo o canela",
+                ],
+                procedure: [
+                  "1. Tuesta el pan integral hasta que esté crujiente.",
+                  "2. Unta generosamente la mantequilla de cacahuete sobre cada tostada.",
+                  "3. Coloca las rodajas de plátano encima de la mantequilla de cacahuete.",
+                  "4. Opcionalmente, espolvorea semillas de sésamo o canela.",
+                ],
+                finish:
+                  "Tostadas robustas y energéticas, con el contraste de la cremosidad de la mantequilla de cacahuete y la dulzura suave del plátano. Un desayuno simple pero sorprendentemente saciante.",
+              },
+              {
+                id: "d-v-3",
+                name: "Scramble de Tofu con Vegetales",
+                desc: "Una alternativa vegana al huevo revuelto, rica en proteínas y personalizable con tus verduras favoritas.",
+                nutrition: {
+                  cal: 350,
+                  fat: 18,
+                  sodium: 250,
+                  protein: 20,
+                  carbs: 25,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Tofu+Scramble",
+                ingredients: [
+                  "200g de tofu firme prensado y desmenuzado",
+                  "1/2 pimiento rojo picado",
+                  "1/4 cebolla morada picada",
+                  "1 taza de espinacas",
+                  "1/4 cucharadita de cúrcuma (para el color)",
+                  "Sal negra (kala namak) al gusto (para sabor a huevo)",
+                  "Aceite de oliva",
+                ],
+                procedure: [
+                  "1. En un sartén con aceite de oliva, saltea la cebolla y el pimiento hasta que estén tiernos.",
+                  "2. Agrega el tofu desmenuzado y la cúrcuma. Cocina, revolviendo y machacando el tofu, durante 5-7 minutos.",
+                  "3. Incorpora las espinacas hasta que se marchiten. Sazona con sal negra y ajusta la sal regular.",
+                  "4. Sirve caliente.",
+                ],
+                finish:
+                  "Un 'revuelto' de tofu vibrante y sabroso, con trozos de verduras coloridas. La cúrcuma le da un color apetitoso y la sal negra un toque auténtico a huevo.",
+              },
+              {
+                id: "d-v-4",
+                name: "Avena Cocida con Manzana y Canela",
+                desc: "Un desayuno cálido y reconfortante, totalmente vegano y lleno de fibra.",
+                nutrition: {
+                  cal: 320,
+                  fat: 6,
+                  sodium: 30,
+                  protein: 9,
+                  carbs: 60,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Avena+Manzana+Canela",
+                ingredients: [
+                  "1/2 taza de avena en hojuelas",
+                  "1.5 tazas de leche de almendras sin azúcar",
+                  "1 manzana pequeña, rallada o picada",
+                  "1 cucharadita de canela en polvo",
+                  "Una pizca de nuez mos",
+                  "1 cucharada de sirope de arce o agave (opcional)",
+                ],
+                procedure: [
+                  "1. En una olla pequeña, combina la avena, la leche de almendras, la manzana rallada, la canela y la nuez moscada.",
+                  "2. Lleva a ebullición suave, luego reduce el fuego a bajo y cocina a fuego lento, revolviendo ocasionalmente, por 5-7 minutos o hasta que la avena esté cremosa y el líquido se haya absorbido.",
+                  "3. Retira del fuego y si deseas, endulza con sirope de arce o agave. Sirve caliente.",
+                ],
+                finish:
+                  "Un bowl de avena cálido y especiado, con el dulzor suave de la manzana. Su textura cremosa lo hace un desayuno muy reconfortante y lleno de aroma.",
+              },
+              {
+                id: "d-v-5",
+                name: "Tostadas con Hummus y Tomate",
+                desc: "Un desayuno salado y vegano, fácil de preparar y sorprendentemente satisfactorio.",
+                nutrition: {
+                  cal: 280,
+                  fat: 12,
+                  sodium: 200,
+                  protein: 10,
+                  carbs: 30,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Hummus+Tomate+Tostada",
+                ingredients: [
+                  "2 rebanadas de pan integral (vegano), tostado",
+                  "2 cucharadas de hummus",
+                  "1/2 tomate mediano, en rodajas finas",
+                  "Una pizca de orégano seco o pimentón",
+                  "Sal y pimienta al gusto",
+                ],
+                procedure: [
+                  "1. Tuesta las rebanadas de pan integral hasta que estén doradas.",
+                  "2. Unta generosamente el hummus sobre cada tostada.",
+                  "3. Coloca las rodajas de tomate sobre el hummus.",
+                  "4. Sazona con sal, pimienta y espolvorea orégano o pimentón.",
+                ],
+                finish:
+                  "Tostadas crujientes con una capa suave de hummus, complementada por la frescura y jugosidad del tomate. Un desayuno simple pero lleno de sabor.",
+              },
+            ],
+            snacks: [
+              {
+                id: "d-sn-1",
+                name: "Mini Muffins de Zanahoria y Nuez",
+                desc: "Un snack dulce y saludable, perfecto para acompañar el café de la mañana o media tarde.",
+                nutrition: {
+                  cal: 150,
+                  fat: 8,
+                  sodium: 90,
+                  protein: 3,
+                  carbs: 18,
+                },
+                health: 3,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Muffin+Zanahoria",
+                ingredients: [
+                  "1/2 taza de harina integral",
+                  "1/4 taza de zanahoria rallada",
+                  "2 cucharadas de nueces picadas",
+                  "1/4 taza de puré de manzana sin azúcar",
+                  "1 huevo",
+                  "1/4 taza de leche (o vegetal)",
+                  "1 cucharadita de polvo para hornear",
+                  "Especias al gusto (canela, nuez moscada)",
+                ],
+                procedure: [
+                  "1. Precalienta el horno a 180°C (350°F) y prepara un molde para mini muffins.",
+                  "2. En un bowl, mezcla la harina, polvo para hornear y especias. En otro, combina el puré de manzana, huevo y leche.",
+                  "3. Vierte los ingredientes húmedos sobre los secos y mezcla hasta combinar. Agrega la zanahoria y nueces.",
+                  "4. Rellena los moldes y hornea por 12-15 minutos, o hasta que un palillo salga limpio.",
+                ],
+                finish:
+                  "Pequeños muffins húmedos y especiados, con trozos tiernos de zanahoria y el crujido de las nueces. Ideales para un bocado dulce y lleno de sabor.",
+              },
+              {
+                id: "d-sn-2",
+                name: "Barritas de Energía de Dátiles y Avena",
+                desc: "Un snack energético sin hornear, perfecto para llevar y recargar energías.",
+                nutrition: {
+                  cal: 200,
+                  fat: 7,
+                  sodium: 20,
+                  protein: 4,
+                  carbs: 32,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Barritas+Energia",
+                ingredients: [
+                  "1 taza de dátiles Medjool sin hueso",
+                  "1/2 taza de avena en hojuelas",
+                  "1/4 taza de mantequilla de almendras",
+                  "2 cucharadas de semillas de chía",
+                  "Una pizca de sal",
+                ],
+                procedure: [
+                  "1. En un procesador de alimentos, procesa los dátiles hasta formar una pasta pegajosa.",
+                  "2. Agrega la avena, mantequilla de almendras, semillas de chía y sal. Procesa hasta que todo esté bien combinado y se forme una masa.",
+                  "3. Presiona la mezcla firmemente en un molde forrado con papel de horno.",
+                  "4. Refrigera por al menos 30 minutos y luego corta en barritas.",
+                ],
+                finish:
+                  "Barritas densas y masticables, con un dulzor natural de los dátiles y un toque de frutos secos. Son fáciles de comer sobre la marcha y muy saciantes.",
+              },
+              {
+                id: "d-sn-3",
+                name: "Manzana con Mantequilla de Almendras",
+                desc: "Un clásico snack rápido y saludable, lleno de fibra y proteínas.",
+                nutrition: {
+                  cal: 180,
+                  fat: 12,
+                  sodium: 5,
+                  protein: 5,
+                  carbs: 20,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Manzana+Almendras",
+                ingredients: [
+                  "1 manzana mediana",
+                  "2 cucharadas de mantequilla de almendras natural",
+                ],
+                procedure: [
+                  "1. Lava y corta la manzana en rodajas o gajos.",
+                  "2. Unta cada trozo de manzana con una porción de mantequilla de almendras.",
+                ],
+                finish:
+                  "Un snack simple y refrescante, donde la dulzura y la acidez de la manzana se complementan perfectamente con la cremosidad y el sabor a nuez de la mantequilla de almendras.",
+              },
+              {
+                id: "d-sn-4",
+                name: "Rollitos de Pepino y Queso Crema Ligero",
+                desc: "Un snack refrescante y bajo en carbohidratos, ideal para picar entre comidas.",
+                nutrition: { cal: 90, fat: 6, sodium: 80, protein: 4, carbs: 4 },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Rollitos+Pepino+Queso",
+                ingredients: [
+                  "1 pepino mediano",
+                  "2 cucharadas de queso crema ligero",
+                  "Una pizca de eneldo seco o fresco picado",
+                ],
+                procedure: [
+                  "1. Con un pelador de verduras, haz tiras finas a lo largo del pepino.",
+                  "2. En un bowl pequeño, mezcla el queso crema con el eneldo.",
+                  "3. Extiende cada tira de pepino y unta una pequeña cantidad de la mezcla de queso crema en un extremo.",
+                  "4. Enrolla cuidadosamente el pepino para formar un rollito. Sirve frío.",
+                ],
+                finish:
+                  "Rollitos de pepino frescos y crujientes, con un relleno cremoso y ligeramente herbal. Un snack muy ligero y agradable para cualquier momento.",
+              },
+              {
+                id: "d-sn-5",
+                name: "Rebanadas de Pera con Queso Cottage",
+                desc: "Un snack dulce y salado, rico en proteínas y fibra, ideal para una merienda equilibrada.",
+                nutrition: {
+                  cal: 160,
+                  fat: 4,
+                  sodium: 150,
+                  protein: 10,
+                  carbs: 22,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Pera+Cottage",
+                ingredients: [
+                  "1 pera mediana",
+                  "1/2 taza de queso cottage bajo en grasa",
+                  "Pizca de canela (opcional)",
+                ],
+                procedure: [
+                  "1. Lava y corta la pera en rodajas o gajos.",
+                  "2. Sirve el queso cottage en un bowl pequeño.",
+                  "3. Sumerge las rebanadas de pera en el queso cottage. Si deseas, espolvorea canela por encima.",
+                ],
+                finish:
+                  "La dulzura jugosa de la pera combinada con la textura granulosa y el sabor suave del queso cottage. Un snack que sorprende por su simplicidad y su perfil nutricional.",
+              },
+            ],
+          },
+          comida: {
+            saludables: [
+              {
+                id: "c-s-1",
+                name: "Salmón al Horno con Espárragos y Quinoa",
+                desc: "Un plato principal equilibrado, rico en omega-3, proteínas y fibra, ideal para una comida completa.",
+                nutrition: {
+                  cal: 550,
+                  fat: 25,
+                  sodium: 300,
+                  protein: 35,
+                  carbs: 40,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Salmon+Quinoa",
+                ingredients: [
+                  "1 filete de salmón (aprox. 180g)",
+                  "1 manojo de espárragos frescos",
+                  "1/2 taza de quinoa cocida",
+                  "1 cucharada de aceite de oliva",
+                  "Jugo de 1/2 limón",
+                  "Sal, pimienta y eneldo fresco al gusto",
+                ],
+                procedure: [
+                  "1. Precalienta el horno a 200°C (400°F).",
+                  "2. Coloca el salmón en una bandeja para hornear, rocía con la mitad del aceite de oliva, sal, pimienta y jugo de limón.",
+                  "3. En la misma bandeja, añade los espárragos, rocía con el resto del aceite, sal y pimienta.",
+                  "4. Hornea por 15-20 minutos, o hasta que el salmón esté cocido a tu gusto y los espárragos tiernos y ligeramente crujientes.",
+                  "5. Sirve el salmón y los espárragos con la quinoa cocida. Espolvorea eneldo fresco.",
+                ],
+                finish:
+                  "Un plato vibrante y bien presentado, con el color rosado del salmón contrastando con el verde brillante de los espárragos. El aroma a limón y eneldo añade un toque fresco y gourmet.",
+              },
+              {
+                id: "c-s-2",
+                name: "Ensalada de Pollo a la Parrilla con Aderezo Casero",
+                desc: "Una ensalada fresca y nutritiva, con proteínas magras y una variedad de vegetales.",
+                nutrition: {
+                  cal: 480,
+                  fat: 28,
+                  sodium: 250,
+                  protein: 30,
+                  carbs: 25,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Ensalada+Pollo",
+                ingredients: [
+                  "1 pechuga de pollo a la parrilla, cortada en tiras",
+                  "2 tazas de mix de lechugas",
+                  "1/2 aguacate en cubos",
+                  "1/2 pepino en rodajas",
+                  "10-12 tomates cherry partidos por la mitad",
+                  "1/4 taza de cebolla morada finamente rebanada",
+                  "Para el aderezo: 2 cucharadas de aceite de oliva, 1 cucharada de vinagre de manzana, 1 cucharadita de mostaza Dijon, sal y pimienta.",
+                ],
+                procedure: [
+                  "1. En un bowl grande, combina las lechugas, aguacate, pepino, tomates cherry y cebolla morada.",
+                  "2. En un recipiente pequeño, mezcla los ingredientes del aderezo hasta que estén bien emulsionados.",
+                  "3. Añade las tiras de pollo a la ensalada.",
+                  "4. Rocía el aderezo sobre la ensalada y mezcla suavemente hasta que todos los ingredientes estén cubiertos.",
+                ],
+                finish:
+                  "Una ensalada colorida y abundante, con la frescura de los vegetales, la cremosidad del aguacate y el toque ahumado del pollo a la parrilla. Perfecta para una comida ligera pero saciante.",
+              },
+              {
+                id: "c-s-3",
+                name: "Bowl de Garbanzos y Vegetales Asados al Curry",
+                desc: "Un bowl vegetariano lleno de sabor, fibra y especias, ideal para una comida reconfortante.",
+                nutrition: {
+                  cal: 420,
+                  fat: 15,
+                  sodium: 320,
+                  protein: 20,
+                  carbs: 50,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Garbanzos+Asados",
+                ingredients: [
+                  "1 lata (400g) de garbanzos cocidos y escurridos",
+                  "1 calabacín mediano, en cubos",
+                  "1 zanahoria grande, en rodajas",
+                  "1/2 cebolla roja, en gajos",
+                  "1 cucharada de aceite de oliva",
+                  "1 cucharadita de polvo de curry",
+                  "1/2 cucharadita de comino en polvo",
+                  "Sal y pimienta al gusto",
+                  "Cilantro fresco picado para decorar",
+                ],
+                procedure: [
+                  "1. Precalienta el horno a 200°C (400°F).",
+                  "2. En un bowl grande, mezcla los garbanzos, calabacín, zanahoria y cebolla con el aceite de oliva, polvo de curry, comino, sal y pimienta.",
+                  "3. Extiende los vegetales en una sola capa sobre una bandeja para hornear forrada con papel de horno.",
+                  "4. Hornea por 25-30 minutos, o hasta que los vegetales estén tiernos y ligeramente caramelizados, revolviendo a la mitad del tiempo.",
+                  "5. Sirve caliente y decora con cilantro fresco picado.",
+                ],
+                finish:
+                  "Un bowl aromático y lleno de color, con la textura suave de los garbanzos y la caramelización de los vegetales asados. El curry añade un sabor cálido y exótico que te transportará.",
+              },
+              {
+                id: "c-s-4",
+                name: "Pechuga de Pollo Rellena de Espinacas y Ricotta",
+                desc: "Una pechuga de pollo jugosa y llena de sabor, ideal para una comida saludable y elegante.",
+                nutrition: {
+                  cal: 450,
+                  fat: 18,
+                  sodium: 350,
+                  protein: 40,
+                  carbs: 15,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Pollo+Relleno",
+                ingredients: [
+                  "1 pechuga de pollo grande, abierta en mariposa",
+                  "1/2 taza de espinacas frescas picadas",
+                  "1/4 taza de queso ricotta bajo en grasa",
+                  "1 diente de ajo picado",
+                  "Sal, pimienta, orégano seco",
+                  "1 cucharadita de aceite de oliva",
+                ],
+                procedure: [
+                  "1. En un bowl, mezcla las espinacas, ricotta, ajo picado, sal y pimienta.",
+                  "2. Extiende la pechuga de pollo abierta en una superficie plana. Rellena con la mezcla de espinacas y enrolla cuidadosamente.",
+                  "3. Asegura con palillos si es necesario. Frota el exterior con aceite de oliva, sal, pimienta y orégano.",
+                  "4. Hornea a 190°C (375°F) por 25-30 minutos, o hasta que el pollo esté cocido por completo. Corta en rodajas antes de servir.",
+                ],
+                finish:
+                  "Una pechuga de pollo dorada y tierna, con un relleno cremoso y lleno de sabor. Visualmente atractiva y muy satisfactoria.",
+              },
+              {
+                id: "c-s-5",
+                name: "Tabulé de Quinoa con Hierbas y Vegetales Frescos",
+                desc: "Una ensalada fresca y aromática, ideal para una comida ligera y nutritiva, con un toque mediterráneo.",
+                nutrition: {
+                  cal: 380,
+                  fat: 10,
+                  sodium: 150,
+                  protein: 12,
+                  carbs: 60,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Tabule+Quinoa",
+                ingredients: [
+                  "1 taza de quinoa cocida y fría",
+                  "1 pepino mediano, picado en cubos",
+                  "2 tomates Roma, picados en cubos",
+                  "1/2 cebolla morada, finamente picada",
+                  "1/2 taza de perejil fresco picado",
+                  "1/4 taza de menta fresca picada",
+                  "Jugo de 1 limón",
+                  "3 cucharadas de aceite de oliva virgen extra",
+                  "Sal y pimienta al gusto",
+                ],
+                procedure: [
+                  "1. En un bowl grande, combina la quinoa cocida, el pepino, los tomates, la cebolla morada, el perejil y la menta.",
+                  "2. En un recipiente pequeño, mezcla el jugo de limón, el aceite de oliva, sal y pimienta para hacer el aderezo.",
+                  "3. Vierte el aderezo sobre la ensalada y mezcla suavemente hasta que todos los ingredientes estén bien combinados.",
+                  "4. Refrigera por al menos 30 minutos antes de servir para que los sabores se asienten.",
+                ],
+                finish:
+                  "Una ensalada vibrante y aromática, donde la quinoa aporta una textura ligera y los vegetales frescos un crujido refrescante. Los sabores de limón y hierbas la hacen muy apetitosa.",
+              },
+            ],
+            ligeras: [
+              {
+                id: "c-l-1",
+                name: "Sopa de Lentejas y Vegetales Ligeros",
+                desc: "Una sopa nutritiva y reconfortante, perfecta para una comida ligera y llena de fibra.",
+                nutrition: {
+                  cal: 350,
+                  fat: 8,
+                  sodium: 200,
+                  protein: 18,
+                  carbs: 50,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Sopa+Lentejas",
+                ingredients: [
+                  "1 taza de lentejas pardinas (previamente remojadas y cocidas o de lata)",
+                  "1 zanahoria picada en cubos pequeños",
+                  "1 tallo de apio picado en cubos pequeños",
+                  "1/2 cebolla picada",
+                  "4 tazas de caldo de vegetales bajo en sodio",
+                  "1 lata de tomates triturados (400g)",
+                  "1 hoja de laurel",
+                  "Sal, pimienta y perejil fresco picado",
+                ],
+                procedure: [
+                  "1. En una olla grande, sofríe la cebolla, zanahoria y apio en un poco de aceite de oliva hasta que estén tiernos.",
+                  "2. Añade las lentejas (si usas de lata, enjuágalas bien), los tomates triturados, el caldo de vegetales y la hoja de laurel.",
+                  "3. Lleva a ebullición, luego reduce el fuego y cocina a fuego lento por 20-25 minutos, o hasta que las lentejas estén suaves y los sabores se hayan mezclado.",
+                  "4. Retira la hoja de laurel. Sazona con sal y pimienta al gusto. Sirve caliente y espolvorea perejil fresco.",
+                ],
+                finish:
+                  "Una sopa espesa y rústica, con trozos de vegetales coloridos y el sabor terroso de las lentejas. Ideal para calentar el cuerpo y el alma sin sentirte pesado.",
+              },
+              {
+                id: "c-l-2",
+                name: "Wrap de Lechuga con Pavo y Verduras",
+                desc: "Un wrap fresco y crujiente, sin pan, ideal para una comida muy baja en carbohidratos.",
+                nutrition: {
+                  cal: 280,
+                  fat: 10,
+                  sodium: 300,
+                  protein: 25,
+                  carbs: 15,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Wrap+Lechuga",
+                ingredients: [
+                  "4 hojas grandes de lechuga romana o iceberg",
+                  "100g de pechuga de pavo cocida, desmenuzada o en lonchas",
+                  "1/4 pepino en juliana",
+                  "1/4 zanahoria rallada",
+                  "2 cucharadas de hummus ligero",
+                  "Opcional: un toque de salsa Sriracha o mostaza",
+                ],
+                procedure: [
+                  "1. Lava y seca bien las hojas de lechuga para que sirvan de 'tortillas'.",
+                  "2. Extiende cada hoja de lechuga en una superficie plana.",
+                  "3. Unta una fina capa de hummus en cada hoja.",
+                  "4. Rellena con el pavo desmenuzado, pepino y zanahoria rallada. Si deseas, añade un toque de salsa Sriracha o mostaza.",
+                  "5. Enrolla cuidadosamente cada hoja para formar un wrap.",
+                ],
+                finish:
+                  "Wraps ligeros y refrescantes, donde el crujido de la lechuga contrasta con la suavidad del pavo y el hummus. Una opción muy versátil y adaptable a tus vegetales favoritos.",
+              },
+              {
+                id: "c-l-3",
+                name: "Pescado Blanco al Vapor con Brócoli",
+                desc: "Una comida sencilla y limpia, perfecta para una digestión fácil y aporte de proteínas.",
+                nutrition: {
+                  cal: 300,
+                  fat: 5,
+                  sodium: 180,
+                  protein: 30,
+                  carbs: 10,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Pescado+Brocoli",
+                ingredients: [
+                  "1 filete de pescado blanco (tilapia, merluza, bacalao) de 150g",
+                  "1 cabeza de brócoli pequeña, en floretes",
+                  "Jugo de 1/2 limón",
+                  "Sal y pimienta al gusto",
+                  "Hierbas frescas (eneldo o perejil) para decorar",
+                ],
+                procedure: [
+                  "1. Sazona el filete de pescado con sal, pimienta y un poco de jugo de limón.",
+                  "2. Coloca el pescado y los floretes de brócoli en una vaporera. Cocina al vapor por 8-12 minutos, o hasta que el pescado esté opaco y se desmenuce fácilmente y el brócoli esté tierno pero crujiente.",
+                  "3. Sirve inmediatamente, rociando con el resto del jugo de limón y decorando con hierbas frescas.",
+                ],
+                finish:
+                  "Un plato simple y puro, donde el sabor delicado del pescado al vapor se realza con el limón y las hierbas, y el brócoli mantiene su color y nutrientes. Una opción ligera y muy saludable.",
+              },
+              {
+                id: "c-l-4",
+                name: "Ensalada de Atún y Garbanzos con Vinagreta Ligera",
+                desc: "Una ensalada proteica y fácil de preparar, ideal para una comida ligera y nutritiva.",
+                nutrition: {
+                  cal: 360,
+                  fat: 15,
+                  sodium: 300,
+                  protein: 25,
+                  carbs: 30,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Ensalada+Atun+Garbanzos",
+                ingredients: [
+                  "1 lata (150g) de atún en agua, escurrido",
+                  "1 lata (200g) de garbanzos cocidos, escurridos",
+                  "1/2 pepino picado",
+                  "1/4 cebolla morada picada finamente",
+                  "2 cucharadas de cilantro fresco picado",
+                  "Para la vinagreta: 2 cucharadas de aceite de oliva, 1 cucharada de vinagre de vino tinto, 1/2 cucharadita de mostaza Dijon, sal y pimienta.",
+                ],
+                procedure: [
+                  "1. En un bowl mediano, combina el atún desmenuzado, los garbanzos, el pepino, la cebolla morada y el cilantro.",
+                  "2. En un recipiente pequeño, bate los ingredientes de la vinagreta hasta que estén bien emulsionados.",
+                  "3. Vierte la vinagreta sobre la ensalada y mezcla suavemente para combinar todos los ingredientes.",
+                  "4. Sirve fría o a temperatura ambiente.",
+                ],
+                finish:
+                  "Una ensalada abundante y sabrosa, con la textura suave del atún y los garbanzos, y el crujido de los vegetales frescos. La vinagreta ligera realza los sabores sin pesadez.",
+              },
+              {
+                id: "c-l-5",
+                name: "Sopa Fría de Pepino y Yogur",
+                desc: "Una sopa refrescante y muy ligera, perfecta para días calurosos y una digestión suave.",
+                nutrition: {
+                  cal: 150,
+                  fat: 8,
+                  sodium: 100,
+                  protein: 8,
+                  carbs: 10,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Sopa+Pepino+Fria",
+                ingredients: [
+                  "1 pepino grande, pelado y picado",
+                  "1 taza de yogur natural descremado",
+                  "1/2 diente de ajo, picado muy fino",
+                  "Jugo de 1/2 limón",
+                  "1/4 taza de menta fresca picada",
+                  "Sal y pimienta al gusto",
+                  "Agua fría (si es necesario para la consistencia)",
+                ],
+                procedure: [
+                  "1. En una licuadora, combina el pepino picado, el yogur, el ajo, el jugo de limón y la mitad de la menta. Licúa hasta obtener una crema suave y homogénea.",
+                  "2. Si la sopa es muy espesa, añade un poco de agua fría hasta alcanzar la consistencia deseada.",
+                  "3. Sazona con sal y pimienta al gusto. Refrigera por al menos 30 minutos.",
+                  "4. Sirve fría, decorada con el resto de la menta fresca picada.",
+                ],
+                finish:
+                  "Una sopa de un verde pálido, suave y sedosa, con un sabor increíblemente refrescante y el aroma cítrico de la menta. Ideal para refrescarse y nutrirse ligeramente.",
+              },
+            ],
+            veganas: [
+              {
+                id: "c-v-1",
+                name: "Curry de Garbanzos y Espinacas con Leche de Coco",
+                desc: "Un curry vegano cremoso y lleno de sabor, perfecto para una comida reconfortante y nutritiva.",
+                nutrition: {
+                  cal: 490,
+                  fat: 18,
+                  sodium: 350,
+                  protein: 18,
+                  carbs: 65,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Curry+Garbanzos",
+                ingredients: [
+                  "1 lata (400g) de garbanzos cocidos, escurridos",
+                  "2 tazas de espinacas frescas",
+                  "1 lata (400ml) de leche de coco light",
+                  "1 cebolla pequeña picada",
+                  "2 dientes de ajo picados",
+                  "1 trozo de jengibre fresco rallado (1 pulgada)",
+                  "1 cucharada de pasta de curry rojo (o al gusto)",
+                  "1 cucharada de aceite vegetal",
+                  "Cilantro fresco y arroz integral cocido para servir",
+                ],
+                procedure: [
+                  "1. En una olla grande, calienta el aceite vegetal a fuego medio. Añade la cebolla y sofríe hasta que esté transparente.",
+                  "2. Agrega el ajo picado y el jengibre rallado, y cocina por un minuto hasta que estén fragantes.",
+                  "3. Incorpora la pasta de curry y cocina por otro minuto, revolviendo constantemente.",
+                  "4. Añade los garbanzos escurridos y la leche de coco. Lleva a ebullición suave, luego reduce el fuego y cocina a fuego lento por 10-15 minutos para que los sabores se mezclen.",
+                  "5. Finalmente, agrega las espinacas y cocina hasta que se marchiten. Sazona con sal y pimienta al gusto.",
+                  "6. Sirve caliente acompañado de arroz integral y decorado con cilantro fresco.",
+                ],
+                finish:
+                  "Un curry vibrante y aromático, con la cremosidad de la leche de coco y el toque picante y especiado del curry. Los garbanzos aportan una textura sustanciosa y las espinacas frescura. Ideal para una comida vegana llena de sabor.",
+              },
+              {
+                id: "c-v-2",
+                name: "Tacos de Lentejas Especiadas con Pico de Gallo",
+                desc: "Unos tacos veganos llenos de sabor y textura, perfectos para una comida divertida y saludable.",
+                nutrition: {
+                  cal: 400,
+                  fat: 12,
+                  sodium: 280,
+                  protein: 20,
+                  carbs: 55,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Tacos+Lentejas",
+                ingredients: [
+                  "1 taza de lentejas cocidas (pardinas o de Puy)",
+                  "8 tortillas de maíz pequeñas",
+                  "1 pimiento verde pequeño, picado",
+                  "1/2 cebolla pequeña, picada",
+                  "1 cucharadita de comino molido",
+                  "1 cucharadita de chile en polvo",
+                  "1/2 cucharadita de orégano seco",
+                  "Sal y pimienta al gusto",
+                  "Para el Pico de Gallo: 2 tomates roma, 1/4 cebolla blanca, 1/4 taza de cilantro fresco, 1/2 jalapeño (opcional), jugo de 1/2 limón, sal.",
+                ],
+                procedure: [
+                  "1. Para el relleno de lentejas: en un sartén, sofríe el pimiento y la cebolla hasta que estén suaves. Añade las lentejas cocidas y las especias. Cocina por 5-7 minutos, revolviendo, hasta que las lentejas estén bien calientes y los sabores mezclados.",
+                  "2. Para el Pico de Gallo: pica finamente los tomates, cebolla, cilantro y jalapeño (si usas). Mezcla en un bowl con el jugo de limón y sal.",
+                  "3. Calienta las tortillas en un sartén seco o microondas hasta que estén suaves y manejables.",
+                  "4. Rellena cada tortilla con la mezcla de lentejas y cubre con Pico de Gallo. Sirve inmediatamente.",
+                ],
+                finish:
+                  "Tacos pequeños y coloridos, con un relleno de lentejas especiadas que imita la textura de la carne molida. El pico de gallo aporta un contraste fresco y picante, haciendo cada bocado una explosión de sabor.",
+              },
+              {
+                id: "c-v-3",
+                name: "Ensalada de Quinoa Negra y Vegetales Frescos",
+                desc: "Una ensalada nutritiva y llena de superalimentos, ideal para una comida vegana ligera y llena de energía.",
+                nutrition: {
+                  cal: 380,
+                  fat: 10,
+                  sodium: 150,
+                  protein: 14,
+                  carbs: 60,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Quinoa+Vegana",
+                ingredients: [
+                  "1 taza de quinoa negra cocida y enfriada",
+                  "1 pepino pequeño, en cubos",
+                  "1 pimiento amarillo pequeño, en cubos",
+                  "1/2 taza de maíz dulce (fresco o congelado y descongelado)",
+                  "1/4 taza de cebolla morada finamente picada",
+                  "1/4 taza de perejil fresco picado",
+                  "Para el aderezo: 3 cucharadas de aceite de oliva, 2 cucharadas de jugo de limón, 1 cucharadita de mostaza Dijon, sal y pimienta.",
+                ],
+                procedure: [
+                  "1. Asegúrate de que la quinoa esté completamente fría antes de mezclarla con los vegetales.",
+                  "2. En un bowl grande, combina la quinoa cocida, el pepino, pimiento amarillo, maíz, cebolla morada y perejil.",
+                  "3. En un recipiente aparte, bate los ingredientes del aderezo hasta que estén bien combinados.",
+                  "4. Vierte el aderezo sobre la ensalada de quinoa y mezcla suavemente para que todos los ingredientes se impregnen.",
+                  "5. Refrigera por al menos 15 minutos antes de servir para que los sabores se asienten.",
+                ],
+                finish:
+                  "Una ensalada vibrante y colorida, donde la quinoa negra aporta una textura ligeramente masticable y los vegetales frescos un crujido refrescante. El aderezo cítrico y ligeramente picante realza todos los sabores naturales.",
+              },
+              {
+                id: "c-v-4",
+                name: "Hamburguesa Vegana de Lentejas con Pan Integral",
+                desc: "Una hamburguesa casera y vegana, llena de fibra y proteínas, perfecta para una comida satisfactoria.",
+                nutrition: {
+                  cal: 550,
+                  fat: 20,
+                  sodium: 400,
+                  protein: 25,
+                  carbs: 70,
+                },
+                health: 3,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Hamburguesa+Vegana",
+                ingredients: [
+                  "1 taza de lentejas cocidas",
+                  "1/2 cebolla pequeña, finamente picada",
+                  "1/4 taza de avena en hojuelas",
+                  "1 cucharada de salsa de tomate",
+                  "1/2 cucharadita de comino en polvo",
+                  "Sal y pimienta",
+                  "Pan de hamburguesa integral (vegano)",
+                  "Lechuga, tomate, cebolla, pepinillos y tus salsas veganas favoritas para servir.",
+                ],
+                procedure: [
+                  "1. En un bowl grande, machaca las lentejas cocidas dejando algunos trozos enteros.",
+                  "2. Añade la cebolla picada, avena en hojuelas, salsa de tomate, comino, sal y pimienta. Mezcla bien hasta que todo esté integrado y puedas formar una patty.",
+                  "3. Forma 2 patties de hamburguesa con la mezcla.",
+                  "4. Calienta un poco de aceite en un sartén a fuego medio. Cocina las patties por 5-7 minutos por cada lado, o hasta que estén doradas y crujientes por fuera.",
+                  "5. Arma tu hamburguesa con el pan integral, lechuga, tomate, cebolla, pepinillos y tus salsas preferidas.",
+                ],
+                finish:
+                  "Una hamburguesa robusta y llena de sabor, con una patty casera de lentejas que es satisfactoria y nutritiva. Una opción vegana que no te dejará con hambre.",
+              },
+              {
+                id: "c-v-5",
+                name: "Pasta con Pesto de Espinacas y Nueces",
+                desc: "Una pasta vegana vibrante y deliciosa, llena de sabor y nutrientes.",
+                nutrition: {
+                  cal: 500,
+                  fat: 25,
+                  sodium: 280,
+                  protein: 15,
+                  carbs: 55,
+                },
+                health: 3,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Pasta+Pesto+Vegano",
+                ingredients: [
+                  "150g de pasta integral (espagueti, fusilli)",
+                  "2 tazas de espinacas frescas",
+                  "1/2 taza de nueces",
+                  "2 dientes de ajo",
+                  "1/4 taza de levadura nutricional",
+                  "1/4 taza de aceite de oliva virgen extra",
+                  "Jugo de 1/2 limón",
+                  "Sal y pimienta al gusto",
+                  "Tomates cherry partidos por la mitad para decorar",
+                ],
+                procedure: [
+                  "1. Cocina la pasta integral según las instrucciones del paquete hasta que esté al dente. Guarda 1/4 taza del agua de cocción antes de escurrir.",
+                  "2. Mientras la pasta se cocina, prepara el pesto: en un procesador de alimentos, combina las espinacas, nueces, ajo, levadura nutricional, aceite de oliva y jugo de limón. Procesa hasta obtener una pasta suave. Si está muy espeso, añade un poco del agua de cocción de la pasta.",
+                  "3. Escurre la pasta y regresa a la olla. Vierte el pesto sobre la pasta y mezcla bien hasta que esté completamente cubierta.",
+                  "4. Sirve caliente, decorado con tomates cherry partidos por la mitad.",
+                ],
+                finish:
+                  "Una pasta de un verde intenso, con un aroma a hierbas frescas y nueces tostadas. Cada bocado es cremoso y lleno de sabor, perfecto para una comida vegana reconfortante.",
+              },
+            ],
+            snacks: [
+              {
+                id: "c-sn-1",
+                name: "Edamames al Vapor con Sal Marina",
+                desc: "Un snack de proteína vegetal, sencillo de preparar y muy satisfactorio.",
+                nutrition: {
+                  cal: 180,
+                  fat: 8,
+                  sodium: 120,
+                  protein: 15,
+                  carbs: 13,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Edamame",
+                ingredients: [
+                  "2 tazas de edamames congelados (con vaina)",
+                  "Agua para vaporera",
+                  "Sal marina gruesa al gusto",
+                ],
+                procedure: [
+                  "1. Coloca los edamames congelados en una vaporera.",
+                  "2. Lleva agua a ebullición en la parte inferior de la vaporera y cocina los edamames al vapor por 5-7 minutos, o hasta que estén tiernos y de un color verde brillante.",
+                  "3. Retira de la vaporera y transfiere a un bowl.",
+                  "4. Espolvorea generosamente con sal marina gruesa y sirve caliente.",
+                ],
+                finish:
+                  "Vainas de edamame de un verde intenso, ligeramente saladas y tiernas por dentro. Un snack adictivo que es divertido de comer y muy nutritivo.",
+              },
+              {
+                id: "c-sn-2",
+                name: "Galletas de Arroz con Aguacate y Chile",
+                desc: "Un snack crujiente y cremoso con un toque picante, ideal para un antojo salado.",
+                nutrition: {
+                  cal: 160,
+                  fat: 10,
+                  sodium: 80,
+                  protein: 3,
+                  carbs: 15,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Galletas+Arroz",
+                ingredients: [
+                  "2 galletas de arroz inflado (sin sal)",
+                  "1/4 aguacate maduro",
+                  "Pizca de sal",
+                  "Chile en polvo o hojuelas de chile al gusto",
+                ],
+                procedure: [
+                  "1. Unta el aguacate machacado sobre cada galleta de arroz.",
+                  "2. Sazona con una pizca de sal y espolvorea chile en polvo o hojuelas de chile al gusto.",
+                ],
+                finish:
+                  "Un snack que combina el crujido ligero de la galleta de arroz con la suavidad y riqueza del aguacate, realzado por el toque picante del chile. Sencillo pero muy satisfactorio.",
+              },
+              {
+                id: "c-sn-3",
+                name: "Zanahorias Baby con Hummus Casero",
+                desc: "Un clásico snack vegetal, fresco y saludable, ideal para cualquier momento del día.",
+                nutrition: {
+                  cal: 150,
+                  fat: 8,
+                  sodium: 100,
+                  protein: 5,
+                  carbs: 15,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Zanahorias+Hummus",
+                ingredients: [
+                  "1 taza de zanahorias baby o zanahorias en bastones",
+                  "1/2 taza de hummus (casero o comprado)",
+                ],
+                procedure: [
+                  "1. Lava bien las zanahorias.",
+                  "2. Sirve el hummus en un pequeño bowl.",
+                  "3. Utiliza las zanahorias como dip para el hummus.",
+                ],
+                finish:
+                  "Un snack vibrante y crujiente, donde la dulzura natural de la zanahoria se complementa con la cremosidad y el sabor a garbanzo del hummus. Un clásico infalible para la salud.",
+              },
+              {
+                id: "c-sn-4",
+                name: "Rollitos de Pepino y Jamón de Pavo",
+                desc: "Un snack ligero y proteico, perfecto para saciar el hambre sin excesos.",
+                nutrition: {
+                  cal: 80,
+                  fat: 2,
+                  sodium: 180,
+                  protein: 10,
+                  carbs: 3,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Rollitos+Pavo+Pepino",
+                ingredients: [
+                  "1/2 pepino mediano",
+                  "2 lonchas de jamón de pavo bajo en sodio",
+                  "1 cucharada de queso crema light (opcional)",
+                ],
+                procedure: [
+                  "1. Con un pelador de verduras, haz tiras finas a lo largo del pepino.",
+                  "2. Si usas, unta una fina capa de queso crema light en cada loncha de jamón de pavo.",
+                  "3. Coloca una loncha de jamón de pavo en un extremo de una tira de pepino y enrolla firmemente.",
+                  "4. Repite con el resto de los ingredientes. Sirve frío.",
+                ],
+                finish:
+                  "Rollitos frescos y crujientes, con el contraste del pepino y la suavidad del pavo. Son un snack muy práctico y ligero.",
+              },
+              {
+                id: "c-sn-5",
+                name: "Palitos de Apio con Mantequilla de Cacahuete",
+                desc: "Un snack clásico, crujiente y energético, que combina fibra y proteína.",
+                nutrition: {
+                  cal: 170,
+                  fat: 12,
+                  sodium: 70,
+                  protein: 6,
+                  carbs: 10,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Apio+Cacahuete",
+                ingredients: [
+                  "2 tallos de apio",
+                  "2 cucharadas de mantequilla de cacahuete natural",
+                ],
+                procedure: [
+                  "1. Lava y corta los tallos de apio en bastones de unos 10 cm.",
+                  "2. Unta una cucharada de mantequilla de cacahuete a lo largo de cada bastón de apio.",
+                ],
+                finish:
+                  "Bastones de apio crujientes, con una capa generosa de mantequilla de cacahuete cremosa. Un snack simple, pero muy satisfactorio para un antojo entre comidas.",
+              },
+            ],
+          },
+          cena: {
+            saludables: [
+              {
+                id: "ce-s-1",
+                name: "Pechuga de Pollo a la Plancha con Quinoa y Brócoli",
+                desc: "Una cena ligera pero completa, perfecta para una recuperación muscular y una digestión fácil.",
+                nutrition: {
+                  cal: 400,
+                  fat: 10,
+                  sodium: 200,
+                  protein: 40,
+                  carbs: 35,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Pollo+Quinoa+Brocoli",
+                ingredients: [
+                  "1 pechuga de pollo (aprox. 180g)",
+                  "1 taza de quinoa cocida",
+                  "1 cabeza de brócoli pequeña, en floretes",
+                  "1 cucharada de aceite de oliva",
+                  "Sal, pimienta, ajo en polvo, pimentón dulce",
+                ],
+                procedure: [
+                  "1. Sazona la pechuga de pollo con sal, pimienta, ajo en polvo y pimentón.",
+                  "2. Calienta el aceite de oliva en un sartén a fuego medio-alto y cocina la pechuga de pollo por ambos lados hasta que esté dorada y cocida por dentro (aprox. 6-8 minutos por lado).",
+                  "3. Cocina el brócoli al vapor o hirviéndolo en agua con sal por 5-7 minutos, hasta que esté tierno pero crujiente.",
+                  "4. Sirve la pechuga de pollo cortada en rodajas junto con la quinoa cocida y el brócoli.",
+                ],
+                finish:
+                  "Un plato principal limpio y apetitoso, con la pechuga de pollo dorada, el brócoli de un verde intenso y la quinoa como base nutritiva. Una cena reconfortante y sin remordimientos.",
+              },
+              {
+                id: "ce-s-2",
+                name: "Merluza al Horno con Patatas y Judías Verdes",
+                desc: "Un plato de pescado blanco ligero y saludable, ideal para una cena nutritiva.",
+                nutrition: {
+                  cal: 350,
+                  fat: 8,
+                  sodium: 250,
+                  protein: 30,
+                  carbs: 40,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Merluza+Horno",
+                ingredients: [
+                  "1 filete de merluza (aprox. 150g)",
+                  "1 patata mediana, en rodajas finas",
+                  "1 taza de judías verdes",
+                  "1 cucharada de aceite de oliva",
+                  "Jugo de 1/2 limón",
+                  "Sal, pimienta, perejil fresco picado",
+                ],
+                procedure: [
+                  "1. Precalienta el horno a 190°C (375°F).",
+                  "2. En una bandeja para hornear, extiende las rodajas de patata. Rocía con un poco de aceite de oliva, sal y pimienta.",
+                  "3. Coloca el filete de merluza sobre las patatas y las judías verdes a un lado. Rocía todo con el resto del aceite, sal y pimienta y jugo de limón.",
+                  "4. Hornea por 18-25 minutos, o hasta que el pescado esté cocido y las patatas tiernas. El tiempo puede variar según el grosor del pescado y las patatas.",
+                  "5. Sirve inmediatamente, espolvoreando perejil fresco.",
+                ],
+                finish:
+                  "Un plato de horno simple y casero, con la merluza jugosa, patatas tiernas y judías verdes vibrantes. Un aroma fresco a limón y perejil completa esta cena saludable y reconfortante.",
+              },
+              {
+                id: "ce-s-3",
+                name: "Ensalada de Garbanzos y Pepino con Salsa Tahini",
+                desc: "Una ensalada fresca y llena de proteínas vegetales, perfecta para una cena ligera de verano.",
+                nutrition: {
+                  cal: 380,
+                  fat: 15,
+                  sodium: 200,
+                  protein: 15,
+                  carbs: 45,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Garbanzos+Pepino",
+                ingredients: [
+                  "1 lata (400g) de garbanzos cocidos y escurridos",
+                  "1 pepino mediano, en cubos",
+                  "1/2 taza de tomates cherry, partidos por la mitad",
+                  "1/4 taza de cebolla morada finamente picada",
+                  "1/4 taza de perejil fresco picado",
+                  "Para la salsa Tahini: 2 cucharadas de tahini, 2 cucharadas de jugo de limón, 1 diente de ajo picado, 3-4 cucharadas de agua (hasta obtener consistencia deseada), sal y pimienta.",
+                ],
+                procedure: [
+                  "1. En un bowl grande, combina los garbanzos escurridos, pepino, tomates cherry, cebolla morada y perejil.",
+                  "2. En un recipiente pequeño, bate todos los ingredientes de la salsa tahini hasta que estén suaves y cremosos. Ajusta el agua para la consistencia y sazona con sal y pimienta.",
+                  "3. Vierte la salsa tahini sobre la ensalada de garbanzos y mezcla suavemente hasta que todos los ingredientes estén cubiertos.",
+                  "4. Sirve fría o a temperatura ambiente.",
+                ],
+                finish:
+                  "Una ensalada refrescante y mediterránea, con el sabor terroso de los garbanzos, la frescura del pepino y el toque ácido del limón. La salsa tahini le da una cremosidad deliciosa que une todos los sabores.",
+              },
+              {
+                id: "ce-s-4",
+                name: "Sopa de Verduras Mixtas y Pollo",
+                desc: "Una sopa casera y nutritiva, perfecta para una cena reconfortante y ligera, ideal para aprovechar vegetales.",
+                nutrition: {
+                  cal: 320,
+                  fat: 8,
+                  sodium: 250,
+                  protein: 25,
+                  carbs: 30,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Sopa+Verduras+Pollo",
+                ingredients: [
+                  "1 pechuga de pollo cocida y desmenuzada",
+                  "4 tazas de caldo de pollo bajo en sodio",
+                  "1 zanahoria, en rodajas",
+                  "1 tallo de apio, en rodajas",
+                  "1/2 taza de guisantes congelados",
+                  "1/2 taza de maíz congelado",
+                  "1/2 cebolla, picada",
+                  "1 cucharadita de aceite de oliva",
+                  "Sal, pimienta, perejil picado",
+                ],
+                procedure: [
+                  "1. En una olla grande, calienta el aceite de oliva a fuego medio. Sofríe la cebolla, zanahoria y apio por 5-7 minutos hasta que estén tiernos.",
+                  "2. Añade el caldo de pollo y lleva a ebullición. Reduce el fuego y cocina a fuego lento por 10 minutos.",
+                  "3. Incorpora el pollo desmenuzado, guisantes y maíz. Cocina por 5 minutos más hasta que todo esté caliente.",
+                  "4. Sazona con sal y pimienta al gusto. Sirve caliente, espolvoreado con perejil fresco.",
+                ],
+                finish:
+                  "Una sopa clara y reconfortante, con trozos de pollo tierno y una variedad de vegetales coloridos. Es una cena ligera que nutre y satisface sin pesadez.",
+              },
+              {
+                id: "ce-s-5",
+                name: "Pescado en Papillote con Limón y Hierbas",
+                desc: "Un método de cocción saludable que retiene todos los jugos y sabores, perfecto para una cena rápida.",
+                nutrition: {
+                  cal: 280,
+                  fat: 8,
+                  sodium: 200,
+                  protein: 30,
+                  carbs: 10,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Pescado+Papillote",
+                ingredients: [
+                  "1 filete de pescado blanco (150g)",
+                  "1/2 calabacín, en rodajas finas",
+                  "1/2 zanahoria, en juliana",
+                  "Rodajas finas de limón",
+                  "1 cucharadita de aceite de oliva",
+                  "Pizca de sal y pimienta",
+                  "Hierbas frescas (tomillo, romero, eneldo)",
+                ],
+                procedure: [
+                  "1. Precalienta el horno a 200°C (400°F).",
+                  "2. Corta un trozo grande de papel de hornear o papel de aluminio. En el centro, coloca las rodajas de calabacín y zanahoria.",
+                  "3. Coloca el filete de pescado encima de las verduras. Sazona con sal, pimienta, un chorrito de aceite de oliva, las hierbas y un par de rodajas de limón.",
+                  "4. Dobla el papel o aluminio para formar un paquete sellado, asegurándote de que no haya fugas.",
+                  "5. Hornea por 15-20 minutos, o hasta que el pescado esté cocido y las verduras tiernas. Abre con cuidado el paquete al servir, ya que saldrá vapor caliente.",
+                ],
+                finish:
+                  "Un paquete individual que, al abrirse, libera un aroma fresco y herbal. El pescado está jugoso y las verduras tiernas, cocidas en sus propios jugos. Una cena elegante y muy saludable.",
+              },
+            ],
+            ligeras: [
+              {
+                id: "ce-l-1",
+                name: "Crema de Calabacín y Puerro",
+                desc: "Una crema suave y reconfortante, muy baja en calorías, perfecta para una cena ligera.",
+                nutrition: {
+                  cal: 180,
+                  fat: 5,
+                  sodium: 100,
+                  protein: 4,
+                  carbs: 25,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Crema+Calabacin",
+                ingredients: [
+                  "2 calabacines medianos, en rodajas",
+                  "1 puerro, parte blanca en rodajas",
+                  "1 patata pequeña, pelada y en cubos",
+                  "4 tazas de caldo de vegetales bajo en sodio",
+                  "1 cucharada de aceite de oliva",
+                  "Sal y pimienta al gusto",
+                  "Perejil fresco para decorar",
+                ],
+                procedure: [
+                  "1. En una olla grande, calienta el aceite de oliva a fuego medio. Añade el puerro y cocina por 5 minutos hasta que esté suave.",
+                  "2. Agrega el calabacín y la patata. Sofríe por otros 5 minutos.",
+                  "3. Vierte el caldo de vegetales, lleva a ebullición, luego reduce el fuego y cocina a fuego lento por 15-20 minutos, o hasta que las verduras estén muy tiernas.",
+                  "4. Retira del fuego y, con una batidora de inmersión o licuadora, procesa la sopa hasta obtener una crema suave y homogénea. Si está muy espesa, añade un poco más de caldo.",
+                  "5. Sazona con sal y pimienta al gusto. Sirve caliente y decora con perejil fresco picado.",
+                ],
+                finish:
+                  "Una crema aterciopelada y de un verde pálido, con un sabor suave y delicado. Reconfortante y ligera, es una cena perfecta para una noche tranquila.",
+              },
+              {
+                id: "ce-l-2",
+                name: "Ensalada Caprese con Vinagre Balsámico",
+                desc: "Una ensalada clásica italiana, simple, fresca y muy ligera, ideal para una cena rápida.",
+                nutrition: {
+                  cal: 250,
+                  fat: 18,
+                  sodium: 150,
+                  protein: 10,
+                  carbs: 10,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Caprese+Balsamico",
+                ingredients: [
+                  "2 tomates Roma maduros, en rodajas",
+                  "150g de mozzarella fresca (bocconcini o bola grande), en rodajas",
+                  "1/4 taza de hojas de albahaca fresca",
+                  "2 cucharadas de aceite de oliva virgen extra",
+                  "1 cucharada de glaseado balsámico (o vinagre balsámico reducido)",
+                  "Pizca de sal marina y pimienta negra recién molida",
+                ],
+                procedure: [
+                  "1. En un plato o bandeja, alterna las rodajas de tomate y mozzarella, superponiéndolas ligeramente.",
+                  "2. Esparce las hojas de albahaca fresca por encima.",
+                  "3. Rocía generosamente con aceite de oliva virgen extra y luego con el glaseado balsámico (o vinagre balsámico).",
+                  "4. Termina con una pizca de sal marina y pimienta negra recién molida.",
+                ],
+                finish:
+                  "Una ensalada visualmente impactante con los colores de la bandera italiana. Los sabores frescos y contrastantes del tomate, la mozzarella cremosa y la albahaca aromática se realzan con el toque dulce y ácido del balsámico.",
+              },
+              {
+                id: "ce-l-3",
+                name: "Rollitos de Pepino con Queso Crema Ligero y Eneldo",
+                desc: "Un snack o cena muy ligera y refrescante, ideal para una opción baja en carbohidratos.",
+                nutrition: {
+                  cal: 150,
+                  fat: 10,
+                  sodium: 120,
+                  protein: 5,
+                  carbs: 8,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Rollitos+Pepino",
+                ingredients: [
+                  "1 pepino grande",
+                  "4 cucharadas de queso crema ligero",
+                  "1 cucharada de eneldo fresco picado",
+                  "Sal y pimienta al gusto",
+                  "Opcional: un poco de salmón ahumado picado para rellenar",
+                ],
+                procedure: [
+                  "1. Con un pelador de verduras o una mandolina, corta el pepino a lo largo en tiras muy finas y largas.",
+                  "2. En un bowl pequeño, mezcla el queso crema ligero con el eneldo picado, sal y pimienta hasta que esté suave. (Si usas salmón, mézclalo aquí también).",
+                  "3. Extiende una tira de pepino y unta una pequeña cantidad de la mezcla de queso crema en un extremo.",
+                  "4. Enrolla cuidadosamente el pepino para formar un rollito. Repite con el resto de las tiras.",
+                  "5. Sirve frío.",
+                ],
+                finish:
+                  "Rollitos de pepino frescos y crujientes, con un relleno cremoso y aromático. Son sorprendentemente satisfactorios y perfectos para una cena muy ligera o un aperitivo elegante.",
+              },
+              {
+                id: "ce-l-4",
+                name: "Sopa de Verduras Claras (Caldo con Trozos)",
+                desc: "Una sopa básica y muy ligera, ideal para una cena reconfortante y sin sentirte pesado.",
+                nutrition: {
+                  cal: 120,
+                  fat: 3,
+                  sodium: 150,
+                  protein: 5,
+                  carbs: 18,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Sopa+Clara+Verduras",
+                ingredients: [
+                  "4 tazas de caldo de vegetales o pollo bajo en sodio",
+                  "1/2 zanahoria, en cubos pequeños",
+                  "1/2 tallo de apio, en cubos pequeños",
+                  "1/4 taza de guisantes verdes (frescos o congelados)",
+                  "1 cucharada de perejil fresco picado",
+                  "Sal y pimienta al gusto",
+                ],
+                procedure: [
+                  "1. En una olla, lleva el caldo a ebullición.",
+                  "2. Añade la zanahoria y el apio. Cocina por 5-7 minutos hasta que estén tiernos.",
+                  "3. Incorpora los guisantes y cocina por 2-3 minutos más.",
+                  "4. Sazona con sal y pimienta al gusto. Retira del fuego y espolvorea con perejil picado. Sirve caliente.",
+                ],
+                finish:
+                  "Una sopa transparente y aromática, con pequeños trozos de vegetales que aportan color y textura. Es la quintaesencia de una cena ligera y reconfortante.",
+              },
+              {
+                id: "ce-l-5",
+                name: "Filete de Tilapia al Limón y Eneldo",
+                desc: "Un filete de pescado blanco muy ligero y sabroso, cocinado de forma sencilla para una cena saludable.",
+                nutrition: {
+                  cal: 200,
+                  fat: 5,
+                  sodium: 120,
+                  protein: 28,
+                  carbs: 0,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Tilapia+Limon",
+                ingredients: [
+                  "1 filete de tilapia (aprox. 150g)",
+                  "Jugo de 1/2 limón",
+                  "1 cucharadita de eneldo fresco picado (o 1/2 cucharadita seco)",
+                  "1 cucharadita de aceite de oliva",
+                  "Sal y pimienta al gusto",
+                ],
+                procedure: [
+                  "1. Sazona el filete de tilapia con sal y pimienta por ambos lados.",
+                  "2. Calienta el aceite de oliva en un sartén antiadherente a fuego medio-alto.",
+                  "3. Cocina el filete por 3-4 minutos por cada lado, o hasta que esté dorado y cocido por completo.",
+                  "4. Retira del fuego, rocía con el jugo de limón y espolvorea el eneldo picado. Sirve inmediatamente.",
+                ],
+                finish:
+                  "Un filete de tilapia blanco y tierno, con un aroma fresco a limón y eneldo. Es un plato muy ligero que resalta el sabor natural del pescado.",
+              },
+            ],
+            veganas: [
+              {
+                id: "ce-v-1",
+                name: "Bowl de Frijoles Negros y Arroz Integral con Aguacate",
+                desc: "Un bowl vegano sustancioso y lleno de fibra, perfecto para una cena nutritiva.",
+                nutrition: {
+                  cal: 500,
+                  fat: 18,
+                  sodium: 350,
+                  protein: 20,
+                  carbs: 65,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Bowl+Frijoles",
+                ingredients: [
+                  "1 taza de arroz integral cocido",
+                  "1 lata (400g) de frijoles negros, enjuagados y escurridos",
+                  "1/2 aguacate maduro, en cubos",
+                  "1/4 taza de maíz dulce (fresco o congelado y descongelado)",
+                  "2 cucharadas de cilantro fresco picado",
+                  "Jugo de 1/2 limón",
+                  "Sal, pimienta, comino y chile en polvo al gusto",
+                ],
+                procedure: [
+                  "1. En un bowl grande, combina el arroz integral cocido, los frijoles negros, el maíz y el cilantro fresco.",
+                  "2. Sazona con sal, pimienta, comino y chile en polvo al gusto. Exprime el jugo de limón por encima y mezcla bien.",
+                  "3. Sirve la mezcla en bowls individuales y decora con los cubos de aguacate.",
+                  "4. Puedes añadir un toque de salsa picante si te gusta.",
+                ],
+                finish:
+                  "Un bowl colorido y texturizado, con la riqueza de los frijoles negros, la suavidad del aguacate y el frescor del cilantro. Un plato completo y satisfactorio que celebra los sabores latinos.",
+              },
+              {
+                id: "ce-v-2",
+                name: "Pizza Vegana de Tortilla con Vegetales",
+                desc: "Una pizza rápida y ligera, ideal para una cena vegana improvisada.",
+                nutrition: {
+                  cal: 380,
+                  fat: 15,
+                  sodium: 400,
+                  protein: 12,
+                  carbs: 45,
+                },
+                health: 3,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Pizza+Tortilla",
+                ingredients: [
+                  "1 tortilla de trigo grande (vegana)",
+                  "2 cucharadas de salsa de tomate o marinara",
+                  "1/2 pimiento verde, en tiras finas",
+                  "1/4 cebolla morada, en rodajas finas",
+                  "Champiñones en láminas",
+                  "Opcional: aceitunas negras, jalapeños",
+                  "Una pizca de orégano seco",
+                ],
+                procedure: [
+                  "1. Precalienta el horno a 200°C (400°F).",
+                  "2. Extiende la tortilla en una bandeja para hornear.",
+                  "3. Unta la salsa de tomate sobre la tortilla, dejando un pequeño borde.",
+                  "4. Distribuye uniformemente el pimiento, la cebolla, los champiñones y cualquier otro vegetal que desees.",
+                  "5. Espolvorea con orégano seco.",
+                  "6. Hornea por 8-12 minutos, o hasta que el queso se derrita y los bordes de la tortilla estén ligeramente crujientes.",
+                  "7. Retira del horno y decora con orégano seco y albahaca fresca.",
+                ],
+                finish:
+                  "Una mini pizza individual de base fina y crujiente, cubierta con vegetales coloridos y aromáticos. Una opción casera y controlada para satisfacer el antojo de pizza.",
+              },
+              {
+                id: "ce-v-3",
+                name: "Estofado de Verduras de Raíz con Hierbas",
+                desc: "Un estofado vegano robusto y aromático, perfecto para una cena reconfortante en climas fríos.",
+                nutrition: {
+                  cal: 450,
+                  fat: 10,
+                  sodium: 300,
+                  protein: 10,
+                  carbs: 70,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Estofado+Raiz",
+                ingredients: [
+                  "2 zanahorias grandes, en trozos",
+                  "2 patatas medianas, en cubos",
+                  "1 batata mediana, en cubos",
+                  "1 cebolla grande, picada",
+                  "2 dientes de ajo, picados",
+                  "4 tazas de caldo de vegetales",
+                  "1 lata (400g) de tomate triturado",
+                  "1 cucharada de pasta de tomate",
+                  "Hierbas frescas (tomillo, romero, perejil) o secas",
+                  "Aceite de oliva, sal y pimienta",
+                ],
+                procedure: [
+                  "1. En una olla grande a fuego medio, calienta el aceite de oliva. Sofríe la cebolla y el ajo hasta que estén suaves y fragantes.",
+                  "2. Añade las zanahorias, patatas y batata. Cocina por 5-7 minutos, revolviendo ocasionalmente.",
+                  "3. Incorpora la pasta de tomate y las hierbas. Cocina por un minuto más, revolviendo bien.",
+                  "4. Vierte el caldo de vegetales y el tomate triturado. Lleva a ebullición, luego reduce el fuego, tapa y cocina a fuego lento por 25-35 minutos, o hasta que las verduras estén tiernas.",
+                  "5. Sazona con sal y pimienta al gusto. Sirve caliente.",
+                ],
+                finish:
+                  "Un estofado espeso y aromático, con la dulzura de las verduras de raíz y el toque herbal de las especias. Un plato reconfortante que te nutrirá en profundidad.",
+              },
+              {
+                id: "ce-v-4",
+                name: "Lasaña de Calabacín y Espinacas (sin pasta)",
+                desc: "Una lasaña vegana y baja en carbohidratos, utilizando láminas de calabacín en lugar de pasta.",
+                nutrition: {
+                  cal: 380,
+                  fat: 15,
+                  sodium: 350,
+                  protein: 15,
+                  carbs: 40,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Lasana+Calabacin+Vegana",
+                ingredients: [
+                  "2 calabacines grandes, en láminas finas",
+                  "2 tazas de espinacas frescas",
+                  "1 lata (400g) de tomate triturado",
+                  "1/2 cebolla, picada",
+                  "2 dientes de ajo, picados",
+                  "1/2 taza de nueces de la India (anacardos) remojadas (para salsa cremosa)",
+                  "1/4 taza de levadura nutricional",
+                  "Jugo de 1/2 limón",
+                  "Aceite de oliva, sal, pimienta, orégano",
+                ],
+                procedure: [
+                  "1. Precalienta el horno a 180°C (350°F).",
+                  "2. Para la salsa de tomate: sofríe cebolla y ajo en aceite de oliva. Añade el tomate triturado, orégano, sal y pimienta. Cocina a fuego lento por 15 minutos.",
+                  "3. Para la crema de anacardos: licúa las nueces de la India remojadas con la levadura nutricional, jugo de limón, un poco de agua (si es necesario), sal y pimienta hasta obtener una crema suave.",
+                  "4. Monta la lasaña: en un molde para hornear, coloca una capa de láminas de calabacín, luego una capa de salsa de tomate, espinacas y un poco de la crema de anacardos. Repite las capas terminando con calabacín y un poco de crema por encima.",
+                  "5. Hornea por 30-40 minutos, o hasta que el calabacín esté tierno y la lasaña burbujeante.",
+                ],
+                finish:
+                  "Una lasaña vegana en capas, con láminas tiernas de calabacín y un relleno cremoso y sabroso. Es una opción nutritiva y satisfactoria sin la pesadez de la pasta.",
+              },
+              {
+                id: "ce-v-5",
+                name: "Burgers de Champiñones Portobello Asados",
+                desc: "Una alternativa vegana a la hamburguesa, con champiñones Portobello grandes y sabrosos.",
+                nutrition: {
+                  cal: 400,
+                  fat: 15,
+                  sodium: 300,
+                  protein: 10,
+                  carbs: 50,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Portobello+Burger",
+                ingredients: [
+                  "2 champiñones Portobello grandes, sin tallo",
+                  "2 cucharadas de salsa balsámica",
+                  "1 cucharada de aceite de oliva",
+                  "Sal y pimienta al gusto",
+                  "Pan de hamburguesa integral (vegano)",
+                  "Lechuga, tomate, cebolla, pepinillos y tus aderezos veganos favoritos para servir.",
+                ],
+                procedure: [
+                  "1. Precalienta la parrilla o un sartén a fuego medio-alto.",
+                  "2. Limpia los champiñones. En un plato, mezcla la salsa balsámica, el aceite de oliva, sal y pimienta. Marina los champiñones en esta mezcla por 10 minutos.",
+                  "3. Cocina los champiñones a la parrilla o en el sartén por 5-7 minutos por cada lado, o hasta que estén tiernos y ligeramente carbonizados.",
+                  "4. Tuesta los panes de hamburguesa. Arma tu hamburguesa con el champiñón asado, lechuga, tomate, cebolla, pepinillos y los aderezos que prefieras.",
+                ],
+                finish:
+                  "Una hamburguesa robusta y llena de sabor umami, con un champiñón Portobello jugoso como protagonista. Es una opción vegana muy satisfactoria y con carácter.",
+              },
+            ],
+            snacks: [
+              {
+                id: "ce-sn-1",
+                name: "Crackers Integrales con Paté de Lentejas",
+                desc: "Un snack salado y vegano, rico en fibra, ideal para un picoteo nocturno.",
+                nutrition: {
+                  cal: 220,
+                  fat: 8,
+                  sodium: 180,
+                  protein: 10,
+                  carbs: 28,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Crackers+Lentejas",
+                ingredients: [
+                  "4-5 crackers integrales",
+                  "1/2 taza de lentejas cocidas",
+                  "1 cucharada de tahini",
+                  "Jugo de 1/2 limón",
+                  "1/4 cucharadita de comino en polvo",
+                  "Sal y pimienta al gusto",
+                  "Perejil fresco picado para decorar",
+                ],
+                procedure: [
+                  "1. En un procesador de alimentos, combina las lentejas cocidas, tahini, jugo de limón, comino, sal y pimienta. Procesa hasta obtener una pasta suave (añade un poco de agua si es necesario para la consistencia).",
+                  "2. Unta el paté de lentejas sobre los crackers integrales.",
+                  "3. Decora con perejil fresco picado.",
+                ],
+                finish:
+                  "Crackers crujientes con un paté cremoso y especiado. El sabor terroso de las lentejas se realza con el limón y el comino, ofreciendo un snack nutritivo y satisfactorio.",
+              },
+              {
+                id: "ce-sn-2",
+                name: "Chips de Col Rizada (Kale) Horneados",
+                desc: "Chips crujientes y saludables, una alternativa nutritiva a las patatas fritas.",
+                nutrition: {
+                  cal: 100,
+                  fat: 5,
+                  sodium: 50,
+                  protein: 3,
+                  carbs: 12,
+                },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Kale+Chips",
+                ingredients: [
+                  "1 manojo de col rizada (kale)",
+                  "1 cucharada de aceite de oliva",
+                  "Pizca de sal marina",
+                ],
+                procedure: [
+                  "1. Precalienta el horno a 150°C (300°F).",
+                  "2. Lava y seca muy bien la col rizada. Retira los tallos gruesos y rompe las hojas en trozos del tamaño de un bocado.",
+                  "3. En un bowl, mezcla la col rizada con el aceite de oliva y la sal, asegurándote de que todas las hojas estén ligeramente cubiertas.",
+                  "4. Extiende la col rizada en una sola capa sobre una bandeja para hornear.",
+                  "5. Hornea por 10-15 minutos, o hasta que los bordes estén crujientes pero sin quemarse. Vigila de cerca, ya que se queman fácilmente.",
+                  "6. Deja enfriar en la bandeja antes de guardar (se volverán más crujientes al enfriar).",
+                ],
+                finish:
+                  "Chips increíblemente crujientes y ligeros, con un sabor ligeramente amargo y salado. Un snack saludable que satisface el antojo de algo crujiente.",
+              },
+              {
+                id: "ce-sn-3",
+                name: "Rebanadas de Pepino con Tzatziki Ligero",
+                desc: "Un snack fresco y refrescante, ideal para una noche ligera y baja en calorías.",
+                nutrition: { cal: 90, fat: 4, sodium: 80, protein: 5, carbs: 8 },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Pepino+Tzatziki",
+                ingredients: [
+                  "1 pepino grande, en rodajas gruesas",
+                  "1/2 taza de yogur griego natural descremado",
+                  "1/4 taza de pepino rallado (exprimir el exceso de agua)",
+                  "1 diente de ajo pequeño, picado finamente",
+                  "1 cucharada de eneldo fresco picado",
+                  "1/2 cucharada de jugo de limón",
+                  "Sal y pimienta al gusto",
+                ],
+                procedure: [
+                  "1. Para el tzatziki: en un bowl, mezcla el yogur griego, el pepino rallado y exprimido, el ajo picado, el eneldo y el jugo de limón. Sazona con sal y pimienta al gusto.",
+                  "2. Refrigera el tzatziki por al menos 15 minutos para que los sabores se mezclen.",
+                  "3. Sirve las rodajas de pepino junto con el tzatziki como dip.",
+                ],
+                finish:
+                  "Rodajas de pepino crujientes y refrescantes, acompañadas de un tzatziki cremoso y aromático. Un snack ligero que evoca los sabores mediterráneos y te deja una sensación de frescura.",
+              },
+              {
+                id: "ce-sn-4",
+                name: "Mini Pimientos Dulces Rellenos de Queso Crema y Hierbas",
+                desc: "Pequeños pimientos coloridos rellenos, un snack fresco y atractivo para la noche.",
+                nutrition: {
+                  cal: 120,
+                  fat: 8,
+                  sodium: 150,
+                  protein: 6,
+                  carbs: 8,
+                },
+                health: 4,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Mini+Pimientos+Rellenos",
+                ingredients: [
+                  "5-6 mini pimientos dulces de colores, partidos por la mitad a lo largo y sin semillas",
+                  "4 cucharadas de queso crema ligero",
+                  "1 cucharada de ciboulette fresco picado",
+                  "1 cucharada de perejil fresco picado",
+                  "Sal y pimienta al gusto",
+                ],
+                procedure: [
+                  "1. Lava y prepara los mini pimientos.",
+                  "2. En un bowl pequeño, mezcla el queso crema ligero con el ciboulette y el perejil picados. Sazona con sal y pimienta.",
+                  "3. Rellena cada mitad de pimiento con una cucharadita de la mezcla de queso crema. Sirve frío.",
+                ],
+                finish:
+                  "Mitades de mini pimientos vibrantes, llenas de un relleno cremoso y aromático. Son un snack fácil de preparar y visualmente atractivo.",
+              },
+              {
+                id: "ce-sn-5",
+                name: "Tomates Cherry con Balsámico Reducido",
+                desc: "Un snack dulce y ácido, simple y elegante, ideal para un toque fresco en la noche.",
+                nutrition: { cal: 60, fat: 0, sodium: 5, protein: 1, carbs: 15 },
+                health: 5,
+                image:
+                  "https://via.placeholder.com/400x250/d3d3d3/555555?text=Tomates+Balsamico",
+                ingredients: [
+                  "1 taza de tomates cherry",
+                  "1 cucharada de glaseado balsámico (o vinagre balsámico reducido)",
+                  "Hojas de albahaca fresca para decorar",
+                ],
+                procedure: [
+                  "1. Lava los tomates cherry y colócalos en un pequeño bowl.",
+                  "2. Rocía el glaseado balsámico sobre los tomates.",
+                  "3. Decora con hojas de albahaca fresca. Sirve inmediatamente.",
+                ],
+                finish:
+                  "Tomates cherry redondos y jugosos, brillantes con el glaseado balsámico. El dulzor del tomate y la acidez del balsámico se complementan en un bocado refrescante.",
+              },
+            ],
+          },
+        };
+  
+        // Variables globales para el estado de la aplicación
+        let currentMealType = "desayuno";
+        let currentCategory = "saludables";
+        // Mantiene el índice de la receta actual para cada categoría, permitiendo rotar
+        let recipeIndex = {
+          desayuno: { saludables: 0, ligeras: 0, veganas: 0, snacks: 0 },
+          comida: { saludables: 0, ligeras: 0, veganas: 0, snacks: 0 },
+          cena: { saludables: 0, ligeras: 0, veganas: 0, snacks: 0 },
+        };
+  
+        // Gestiona las recetas favoritas
+        let favoriteRecipes = new Set(
+          JSON.parse(localStorage.getItem("favoriteRecipes") || "[]")
+        );
+  
+        // Función para calcular las estrellas de saludabilidad
+        function getHealthStars(healthScore) {
+          let stars = "";
+          for (let i = 0; i < 5; i++) {
+            stars += i < healthScore ? "★" : "☆";
+          }
+          return `<span class="stars">${stars}</span>`;
+        }
+  
+        // Función para mostrar la sección seleccionada y activar el botón de navegación
+        function showSection(sectionId, clickedButton) {
+          document.querySelectorAll(".recipe-section").forEach((section) => {
+            section.style.display = "none";
+          });
+          document.querySelectorAll("nav button").forEach((button) => {
+            button.classList.remove("active");
+          });
+  
+          const targetSection = document.getElementById(sectionId);
+          if (targetSection) {
+            targetSection.style.display = "block";
+            if (clickedButton) {
+              clickedButton.classList.add("active");
+            } else {
+              document.getElementById(`nav-${sectionId}`).classList.add("active");
+            }
+            currentMealType = sectionId;
+            // Cargar la primera categoría de esa sección por defecto
+            loadRecipes(
+              currentMealType,
+              "saludables",
+              document.getElementById(`${currentMealType}-saludables`)
+            );
+          }
+        }
+  
+        // Función para cargar recetas dinámicamente
+        function loadRecipes(mealType, category, clickedButton) {
+          currentMealType = mealType;
+          currentCategory = category;
+  
+          // Desactivar todos los botones de categoría en la sección actual
+          document
+            .querySelectorAll(`#${mealType} .recipe-category-tabs button`)
+            .forEach((btn) => {
+              btn.classList.remove("active");
+            });
+          // Activar el botón clicado
+          if (clickedButton) {
+            clickedButton.classList.add("active");
+          }
+  
+          const recipeContainer = document.getElementById(`${mealType}-recipes`);
+          const recipeList = recipesData[mealType][category];
+  
+          if (!recipeList || recipeList.length === 0) {
+            recipeContainer.innerHTML = `<p style="text-align: center; color: #777;">No hay recetas disponibles para esta categoría en este momento. ¡Pronto tendremos más!</p>`;
+            return;
+          }
+  
+          // Obtener la receta actual según el índice
+          const currentRecipe = recipeList[recipeIndex[mealType][category]];
+          const isFavorite = favoriteRecipes.has(currentRecipe.id);
+  
+          recipeContainer.innerHTML = `
+            <div class="recipe-card">
+              <button class="favorite-button ${
+                isFavorite ? "active" : ""
+              }" onclick="toggleFavorite('${currentRecipe.id}')">
+                  ${isFavorite ? "❤️" : "🤍"}
+              </button>
+              <h3>${currentRecipe.name}</h3>
+              <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 20px;">${
+                currentRecipe.desc
+              }</p>
+              
+              <div class="nutrition-info">
+                <p><strong>Calorías:</strong> ${
+                  currentRecipe.nutrition.cal
+                } kcal</p>
+                <p><strong>Grasas:</strong> ${currentRecipe.nutrition.fat}g</p>
+                <p><strong>Sodio:</strong> ${currentRecipe.nutrition.sodium}mg</p>
+                <p><strong>Proteínas:</strong> ${
+                  currentRecipe.nutrition.protein
+                }g</p>
+                <p><strong>Carbohidratos:</strong> ${
+                  currentRecipe.nutrition.carbs
+                }g</p>
+              </div>
+              <div class="health-indicator">
+                  Saludabilidad: ${getHealthStars(currentRecipe.health)}
+              </div>
+  
+              <img src="${currentRecipe.image}" alt="Imagen de la receta: ${
+            currentRecipe.name
+          }">
+              
+              <div class="recipe-content">
+                <div>
+                  <h4>Ingredientes:</h4>
+                  <ul>
+                    ${currentRecipe.ingredients
+                      .map((ing) => `<li>${ing}</li>`)
+                      .join("")}
+                  </ul>
+                </div>
+                <div>
+                  <h4>Procedimiento:</h4>
+                  <ol>
+                    ${currentRecipe.procedure
+                      .map((proc) => `<li>${proc}</li>`)
+                      .join("")}
+                  </ol>
+                </div>
+                <div>
+                  <h4>Resultado o Presentación Final Esperada:</h4>
+                  <p>${currentRecipe.finish}</p>
+                </div>
+              </div>
+              <button class="generate-button" onclick="generateNewRecipe('${mealType}', '${category}')">
+                Ver otra receta
+              </button>
+            </div>
+          `;
+        }
+  
+        // Función para alternar recetas favoritas
+        function toggleFavorite(recipeId) {
+          if (favoriteRecipes.has(recipeId)) {
+            favoriteRecipes.delete(recipeId);
+            alert("Receta eliminada de favoritos.");
+          } else {
+            favoriteRecipes.add(recipeId);
+            alert("Receta añadida a favoritos.");
+          }
+          localStorage.setItem(
+            "favoriteRecipes",
+            JSON.stringify(Array.from(favoriteRecipes))
+          );
+          // Recargar la receta actual para actualizar el ícono de favorito
+          loadRecipes(
+            currentMealType,
+            currentCategory,
+            document.getElementById(`${currentMealType}-${currentCategory}`)
+          );
+        }
+  
+        // Función para generar una nueva receta (rota entre las disponibles)
+        function generateNewRecipe(mealType, category) {
+          const recipeList = recipesData[mealType][category];
+          if (!recipeList || recipeList.length === 0) return;
+  
+          recipeIndex[mealType][category] =
+            (recipeIndex[mealType][category] + 1) % recipeList.length;
+          loadRecipes(
+            mealType,
+            category,
+            document.getElementById(`${mealType}-${category}`)
+          ); // Recarga con el mismo botón activo
+        }
+  
+        // Función para generar un menú
+        function generateMenu() {
+          const objective = document.getElementById(
+            "nutritional-objective"
+          ).value;
+          const menuDiv = document.getElementById("generated-menu");
+          menuDiv.style.display = "block";
+  
+          if (!objective) {
+            menuDiv.innerHTML =
+              '<p style="text-align: center; color: #777;">Por favor, selecciona un objetivo nutricional para generar tu menú.</p>';
+            return;
+          }
+  
+          let menuHtml = "<h4>Tu Menú Semanal Sugerido:</h4>";
+          const daysOfWeek = [
+            "Lunes",
+            "Martes",
+            "Miércoles",
+            "Jueves",
+            "Viernes",
+            "Sábado",
+            "Domingo",
+          ];
+  
+          // Obtener todas las recetas favoritas con su tipo de comida
+          const favRecipesArray = Array.from(favoriteRecipes)
+            .map((id) => {
+              for (const mealType in recipesData) {
+                for (const category in recipesData[mealType]) {
+                  const recipe = recipesData[mealType][category].find(
+                    (r) => r.id === id
+                  );
+                  if (recipe) return { ...recipe, mealType: mealType }; // Añadir el tipo de comida
+                }
+              }
+              return null;
+            })
+            .filter(Boolean); // Filtrar nulos si el ID no se encuentra
+  
+          // Lógica de selección de recetas para el menú
+          const selectRecipe = (meal, type, usedIdsForDay) => {
+            let options = [];
+  
+            // 1. Priorizar recetas favoritas para el tipo de comida y objetivo, si no se han usado hoy
+            const potentialFavs = favRecipesArray.filter(
+              (fav) => fav.mealType === meal && !usedIdsForDay.includes(fav.id)
+            );
+            if (potentialFavs.length > 0) {
+              if (type === "alimentacion-vegana") {
+                const veganFavs = potentialFavs.filter((r) =>
+                  r.id.includes("-v-")
+                ); // Asumiendo '-v-' en ID para veganas
+                if (veganFavs.length > 0) options = veganFavs;
+              } else if (type === "bajar-grasa" || type === "detox") {
+                const lightFavs = potentialFavs.filter((r) => r.health >= 4); // Más saludables y ligeras
+                if (lightFavs.length > 0) options = lightFavs;
+              } else if (type === "ganar-musculo") {
+                const highProteinFavs = potentialFavs.filter(
+                  (r) => r.nutrition.protein > 20
+                ); // Alto en proteína
+                if (highProteinFavs.length > 0) options = highProteinFavs;
+              }
+              if (options.length === 0) options = potentialFavs; // Si no hay favoritos específicos, toma cualquier favorito
+            }
+  
+            // 2. Si no hay favoritos o no cumplen el objetivo, buscar en las categorías generales
+            if (options.length === 0) {
+              if (type === "alimentacion-vegana") {
+                options = recipesData[meal].veganas.filter(
+                  (r) => !usedIdsForDay.includes(r.id)
+                );
+                if (options.length === 0 && recipesData[meal].veganas.length > 0)
+                  options = recipesData[meal].veganas; // Reciclar veganas
+              } else if (type === "bajar-grasa" || type === "detox") {
+                options = recipesData[meal].ligeras.filter(
+                  (r) => !usedIdsForDay.includes(r.id)
+                );
+                if (options.length === 0 && recipesData[meal].ligeras.length > 0)
+                  options = recipesData[meal].ligeras; // Reciclar ligeras
+              } else if (type === "ganar-musculo") {
+                options = recipesData[meal].saludables.filter(
+                  (r) => r.nutrition.protein > 20 && !usedIdsForDay.includes(r.id)
+                );
+                if (
+                  options.length === 0 &&
+                  recipesData[meal].saludables.length > 0
+                )
+                  options = recipesData[meal].saludables; // Reciclar saludables
+              }
+  
+              // Si aún no hay opciones, o si el objetivo es general, buscar en saludables
+              if (options.length === 0 || type === "") {
+                options = recipesData[meal].saludables.filter(
+                  (r) => !usedIdsForDay.includes(r.id)
+                );
+                if (
+                  options.length === 0 &&
+                  recipesData[meal].saludables.length > 0
+                )
+                  options = recipesData[meal].saludables; // Reciclar saludables
+              }
+            }
+  
+            // Fallback a cualquier receta si todo lo demás falla o ya se usaron todas las opciones únicas
+            if (options.length === 0) {
+              const allMealRecipes = [];
+              for (const cat in recipesData[meal]) {
+                allMealRecipes.push(...recipesData[meal][cat]);
+              }
+              // Tomar una receta aleatoria del total si no hay opciones únicas
+              return (
+                allMealRecipes[
+                  Math.floor(Math.random() * allMealRecipes.length)
+                ] || null
+              );
+            }
+  
+            return options[Math.floor(Math.random() * options.length)];
+          };
+  
+          daysOfWeek.forEach((day) => {
+            menuHtml += `<div class="day-menu"><h4>${day}:</h4><ul>`;
+            const usedIdsForDay = new Set(); // Para evitar repeticiones dentro del mismo día
+  
+            let breakfastRecipe = selectRecipe(
+              "desayuno",
+              objective,
+              Array.from(usedIdsForDay)
+            );
+            if (breakfastRecipe) {
+              menuHtml += `<li><strong>Desayuno:</strong> ${breakfastRecipe.name}</li>`;
+              usedIdsForDay.add(breakfastRecipe.id);
+            }
+  
+            let lunchRecipe = selectRecipe(
+              "comida",
+              objective,
+              Array.from(usedIdsForDay)
+            );
+            if (lunchRecipe) {
+              menuHtml += `<li><strong>Comida:</strong> ${lunchRecipe.name}</li>`;
+              usedIdsForDay.add(lunchRecipe.id);
+            }
+  
+            let dinnerRecipe = selectRecipe(
+              "cena",
+              objective,
+              Array.from(usedIdsForDay)
+            );
+            if (dinnerRecipe) {
+              menuHtml += `<li><strong>Cena:</strong> ${dinnerRecipe.name}</li>`;
+              usedIdsForDay.add(dinnerRecipe.id);
+            }
+            menuHtml += "</ul></div>";
+          });
+  
+          menuHtml += `<p style="font-size: 0.9em; margin-top: 20px; color: #777;"><em>Este menú es una sugerencia. Ajusta las porciones y consulta a un profesional de la salud para planes personalizados.</em></p>`;
+          menuDiv.innerHTML = menuHtml;
+          alert("¡Menú semanal generado! Desplázate hacia abajo para verlo.");
+        }
+  
+        // Inicializar la aplicación al cargar el DOM
+        document.addEventListener("DOMContentLoaded", () => {
+          showSection("desayuno"); // Muestra la sección de desayuno por defecto
+        });
+      </script>
+    </body>
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <p>
+          ¿Tienes alguna pregunta, sugerencia o simplemente quieres compartir tu
+          pasión por la comida gourmet? Nos encantaría escucharte. Utiliza el
+          formulario de contacto o nuestras redes sociales para conectar con la
+          comunidad de Sabor y Saber.
+        </p>
+        <ul class="description-list">
+          <li>
+            <strong>Formulario de Contacto:</strong> Envíanos tus dudas o
+            comentarios directamente.
+          </li>
+          <li>
+            <strong>Redes Sociales:</strong> Síguenos en Instagram, Facebook y
+            Pinterest para más inspiración diaria.
+          </li>
+          <li>
+            <strong>Suscripción al Boletín:</strong> Recibe nuestras últimas
+            recetas y consejos directamente en tu bandeja de entrada.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Sabor y Saber: Tu Guía Gourmet
+         © 2025 Buscador Inteligente de Recetas. Todos los derechos
+          reservados.
+      </p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const boton = document.getElementById("boton-magico");
+        const parrafo = document.getElementById("parrafo-cambiable");
+
+        if (boton && parrafo) {
+          boton.addEventListener("click", function () {
+            parrafo.textContent = "¡Sorpresa! ¡La magia ha sucedido!";
+            parrafo.style.color = "#f39c12";
+            parrafo.style.fontWeight = "bold";
+          });
+        } else {
+          console.error(
+            'Error: No se encontraron los elementos "boton-magico" o "parrafo-cambiable". Asegúrate de que los IDs sean correctos en tu HTML.'
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
